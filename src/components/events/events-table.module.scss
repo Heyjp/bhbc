@@ -1,0 +1,37 @@
+@import '../../sass/mystyles.scss';
+
+.tableTitleColor {
+    width: 100%;
+    background-color: $turquoise;
+} 
+
+.eventContentWrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.dateBoxWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+
+    &h5 {
+        margin-bottom: 0;
+    }
+}
+
+.descWrap {
+    margin-left: 1rem;
+}
+
+.descText {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1em;
+        margin-bottom: 0.5rem;
+}
+
+.hBreak {
+    margin: 0.5rem 0rem !important;
+}

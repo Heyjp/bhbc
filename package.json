@@ -5,20 +5,32 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "bulma": "^0.7.4",
     "gatsby": "^2.2.5",
     "gatsby-image": "^2.0.34",
     "gatsby-plugin-manifest": "^2.0.24",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.10",
+    "gatsby-plugin-react-leaflet": "^2.0.4",
+    "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sharp": "^2.0.30",
     "gatsby-source-filesystem": "^2.0.27",
+    "gatsby-source-strapi": "0.0.7",
     "gatsby-transformer-sharp": "^2.1.17",
+    "leaflet": "^1.4.0",
+    "material-react-icons": "^4.0.0",
+    "moment": "^2.24.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-leaflet": "^2.2.1",
+    "react-markdown": "^4.0.8",
+    "save": "^2.3.3"
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "node-sass": "^4.11.0",
     "prettier": "^1.16.4"
   },
   "keywords": [
@@ -31,7 +43,8 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "repository": {
     "type": "git",

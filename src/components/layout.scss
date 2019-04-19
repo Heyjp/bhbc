@@ -1,0 +1,165 @@
+@import 'bulma/bulma.sass';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Work Sans', sans-serif;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+section {
+        padding: 0 2rem;
+        &.main-container, &.membership-container {
+            min-height: 50vh;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            display: flex;
+            align-items: center;
+        }
+}
+
+
+.divSpacer {
+    margin-top: 1rem;
+}
+
+.box-column {
+    display: flex;
+}
+
+.box-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    
+    a {
+        margin-top: 1rem;
+    }
+}
+
+.box-container {
+    padding: 3rem 1.5rem 1rem;
+    min-height: 40vh;
+}
+
+.sponsor-container {
+    padding-top: 2rem;
+
+}
+
+.contact {
+    margin-top: 3rem;
+    margin-bottom: 3rem
+}
+
+.contact-section {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-section {
+    max-width: 1100px;
+}
+
+.contact-info-wrapper {
+    margin-bottom: 4rem;
+}
+
+.contact-address {
+    
+    li:nth-child(n+2) {
+        padding-left: 1.5rem;
+    }
+}
+
+.events-wrapper{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+
+.events-main {
+    width: 100%;
+    padding-top: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+
+    .box {
+        padding: 0.5em 1em;
+    }
+}
+
+.history-wrap {
+    margin-top: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.commmittee-wrap {
+    margin-top: 1.5rem;
+    min-height: 60vh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.news-list {
+    margin-left: 0px !important;
+    margin-bottom: 2rem;
+    li {
+        list-style: none;
+    }
+
+}
+
+.form-wrap {
+    min-height: 80vh;
+}
+
+.minutes-wrap {
+    min-height: 80vh;
+}
+
+.minute-col {
+    margin-top: 3rem;
+}
+
+.article-wrap {
+    margin-top: 3rem;
+    min-height: 70vh;
+}
+
+.site-wrap {
+    margin: 3rem;
+}
+
+.news-item {
+    margin-top: 1.5rem !important;
+}
+
+.rule-wrap {
+    margin-top: 6rem;
+}
+
+.comp-wrap {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.title-spacer {
+   padding-bottom: 0.5em;
+}
+
+.article-info {
+    margin-bottom: 0px !important;
+}
+
+.article-break {
+    margin-top: 0.25rem !important;
+    margin-bottom: 1.5rem !important;
+}
