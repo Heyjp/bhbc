@@ -6,32 +6,33 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "bulma": "^0.7.4",
-    "gatsby": "^2.2.5",
-    "gatsby-image": "^2.0.34",
-    "gatsby-plugin-manifest": "^2.0.24",
+    "gatsby": "^2.3.25",
+    "gatsby-image": "^2.0.39",
+    "gatsby-plugin-manifest": "^2.0.29",
     "gatsby-plugin-offline": "^2.0.25",
-    "gatsby-plugin-react-helmet": "^3.0.10",
+    "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-react-leaflet": "^2.0.4",
     "gatsby-plugin-sass": "^2.0.11",
-    "gatsby-plugin-sharp": "^2.0.30",
-    "gatsby-source-filesystem": "^2.0.27",
+    "gatsby-plugin-sharp": "^2.0.35",
+    "gatsby-source-filesystem": "^2.0.29",
     "gatsby-source-strapi": "0.0.7",
-    "gatsby-transformer-sharp": "^2.1.17",
+    "gatsby-transformer-sharp": "^2.1.18",
     "leaflet": "^1.4.0",
     "material-react-icons": "^4.0.0",
     "moment": "^2.24.0",
     "prop-types": "^15.7.2",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-leaflet": "^2.2.1",
     "react-markdown": "^4.0.8",
-    "save": "^2.3.3"
+    "save": "^2.3.3",
+    "sharp": "^0.22.0"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
-    "prettier": "^1.16.4"
+    "prettier": "^1.17.0"
   },
   "keywords": [
     "gatsby"

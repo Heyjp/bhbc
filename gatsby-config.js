@@ -15,19 +15,20 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-source-strapi',
       options: {
-        apiURL: 'https://bhbc.herokuapp.com/',
+        apiURL: 'https://bhbc.herokuapp.com',
         contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
           'article', 'file', 'fixture'
         ],
         queryLimit: 1000,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    'gatsby-plugin-offline',
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

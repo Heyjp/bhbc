@@ -47,7 +47,7 @@ export default () => (
               name
               date
               file {
-                publicURL
+                url
               }
             }
           }
