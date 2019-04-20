@@ -17,7 +17,7 @@ export default () => (
                     </h1>
                     <h4 className="subtitle is-5 has-text-centered">Visit or Drop us a line</h4>
                 </div>
-                <MyMap></MyMap>
+                <MyMap />
                 <div className="contact-info-wrapper">
                     <div className="columns">
                         <div className="column is-one-third is-centered">

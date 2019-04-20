@@ -82,7 +82,6 @@ const EventDescription = ({name, description}) => (
 
 
 export default ({events, year, month}) => {
-    console.log(events, 'this is events')
     return (
             <div className="columns" style={{'width': '70%', 'maxWidth': '70%'}}> 
                 <div className="column is-full">
