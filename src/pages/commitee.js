@@ -1,6 +1,5 @@
 import React from 'react';
 import Layout from '../components/layout.js';
-import CommitteeImage from '../images/Committee.jpg'
 
 export default () => (
     <Layout>
@@ -14,7 +13,7 @@ export default () => (
                                 <CommitteeTable />
                             </div>
                             <div className="column">
-                                <img src={CommitteeImage} />
+                            
                             </div>
                         </div>
                     </div>   
