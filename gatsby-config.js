@@ -16,6 +16,10 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-create-client-paths`,
+      options: { prefixes: [`/app/*`] },
+    },
+    {
       resolve: 'gatsby-source-strapi',
       options: {
         apiURL: 'https://bhbc.herokuapp.com',
