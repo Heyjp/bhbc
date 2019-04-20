@@ -5,10 +5,12 @@
  */
 
 // You can delete this file if you're not using it
-const path = require('path');
+import path from 'path';
+import { graphql } from 'gatsby';
 
-exports.createPages = async function ({ actions, graphql }) {
-    const { data } = await graphql(`
+exports.createPages = async function ({ actions }) {
+    const {createPage} = actions;
+   return graphql(`
         query {
             allStrapiArticle {
                 edges { 
@@ -24,15 +26,15 @@ exports.createPages = async function ({ actions, graphql }) {
                 }
             }
         }
-    `)
-
-    await data.allStrapiArticle.edges.forEach((node, index) => {
-        actions.createPage({
-            path: `${node.node.id}`,
-            component: path.resolve(`./src/components/templates/article.js`),
-            context: {
-                id: node.node.id
-            }
+    `).then(result => {
+        result.data.allStrapiArticle.edges.forEach(({node}) => {
+            createPage({
+                path: `${node.node.id}`,
+                component: path.resolve(`./src/components/templates/article.js`),
+                context: {
+                    id: node.node.id
+                }
+            })
         })
     })
 }
