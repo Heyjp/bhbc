@@ -1,24 +1,7 @@
 import React from "react"
 // import WeatherWidget from '../components/weather/weather.js';
 import { Link, graphql } from "gatsby"
-import App from './app.js';
 import Layout from "../components/layout"
-// import Image from "../components/image"
-// import SEO from "../components/seo"
-
-// const IndexPage = () => (
-//   <Layout>
-//     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-//     <h1 className="title">Hi people</h1>
-//     <h2 className="subtitle">Welcome to Burgess Hill Bowls Club</h2>
-//     <p>Welcome to your new Gatsby site.</p>
-//     <p>Now go build something great.</p>
-//     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-//       <Image />
-//     </div>
-//     <Link to="/page-2/">Go to page 2</Link>
-//   </Layout>
-// )
 
 const Hero = () => (
   <section className="hero">
@@ -152,21 +135,6 @@ const Sponsors = () => (
       </div>
   </section>
 )
-
-// const Visiting = () => (
-//   <section>
-//       <div className="container">
-//           <div>
-            
-//           </div>
-//           <div>
-//                 Our Green is open to members of the public, but advance booking is required and the appropriate Green Fee payable. 
-
-//                Please note that we welcome touring sides who are visiting Sussex, please use the contact form if you are interested in playing us.
-//           </div>
-//       </div>
-//   </section>
-// )
 
 const Articles = (props) => {  
   return (
