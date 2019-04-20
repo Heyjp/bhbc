@@ -39,17 +39,17 @@ exports.createPages = async function ({ actions }) {
     })
 }
 
-// Called after every page is created
-exports.onCreatePage = async ({ page, actions }) => {
-    const { createPage } = actions
+// // Called after every page is created
+// exports.onCreatePage = async ({ page, actions }) => {
+//     const { createPage } = actions
 
-    // page.matchPath is special key thats used for matching apges
-    // only on the client
+//     // page.matchPath is special key thats used for matching apges
+//     // only on the client
 
-    if (page.path.match(/^\/app/)) {
-        page.matchPath = "/app/*"
+//     if (page.path.match(/^\/app/)) {
+//         page.matchPath = "/app/*"
 
-        //Update the page
-        createPage(page)
-    }
-}
+//         //Update the page
+//         createPage(page)
+//     }
+// }
