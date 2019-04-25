@@ -1,5 +1,4 @@
 import React from "react"
-// import WeatherWidget from '../components/weather/weather.js';
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 
@@ -136,20 +135,20 @@ const Sponsors = () => (
   </section>
 )
 
-const Articles = (props) => {  
-  return (
-        <ul>
-          {props.articles.edges.map(doc => (
-            <li key={doc.node.id}>
-              <h2 className="subtitle is-2">
-                {doc.node.title}
-              </h2>
-              <p>{doc.node.content}</p>
-            </li>
-          ))}
-        </ul>
-      )
-    }
+// const Articles = (props) => {  
+//   return (
+//         <ul>
+//           {props.articles.edges.map(doc => (
+//             <li key={doc.node.id}>
+//               <h2 className="subtitle is-2">
+//                 {doc.node.title}
+//               </h2>
+//               <p>{doc.node.content}</p>
+//             </li>
+//           ))}
+//         </ul>
+//       )
+//     }
 
 const IndexPage = ({data}) => {
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, navigate } from "gatsby"
 
 
-import { getUser, isLoggedIn, logout } from "../../services/auth";
+import { isLoggedIn, logout } from "../../services/auth";
 
 class Nav extends React.Component {
     
@@ -28,7 +28,7 @@ class Nav extends React.Component {
                         <p className="title">BH<span className="has-text-primary">BC</span></p>
                     </Link>
 
-                    <a role="button" 
+                    <button  
                         className={`navbar-burger ${this.state.activeNav ? 'is-active' : ''}`}
                          data-target="navMenu" 
                          aria-label="menu" 
@@ -38,7 +38,7 @@ class Nav extends React.Component {
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
-                    </a>
+                    </button>
                 </div>
 
                 <div className={`navbar-menu ${this.state.activeNav ? 'is-active' : ''}`}>

@@ -22,9 +22,9 @@ module.exports = {
     {
       resolve: 'gatsby-source-strapi',
       options: {
-        apiURL: 'https://bhbc.herokuapp.com',
+        apiURL: 'http://localhost:1337',
         contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
-          'article', 'file', 'fixture'
+          'article', 'file', 'fixture', 'competition', 'tournament', 'match'
         ],
         queryLimit: 1000,
       },
@@ -50,3 +50,8 @@ module.exports = {
     // 'gatsby-plugin-offline',
   ],
 }
+/*
+
+        devUrl: 'http://localhost:1337',
+        prodUrl: 'https://bhbc.herokuapp.com',
+*/

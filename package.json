@@ -18,6 +18,7 @@
     "gatsby-source-filesystem": "^2.0.29",
     "gatsby-source-strapi": "0.0.7",
     "gatsby-transformer-sharp": "^2.1.18",
+    "jsog": "^1.0.7",
     "leaflet": "^1.4.0",
     "material-react-icons": "^4.0.0",
     "moment": "^2.24.0",
