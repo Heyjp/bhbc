@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from "../components/layout"
 import Moment from 'moment';
+import {graphql} from 'gatsby';
 
 
 import Events from '../components/events/events-table.js';

@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 
 import Tournament from "../components/bracket/tournamentContainer.js"
 import TournamentMenu from '../components/bracket/tournamentMenu.js';
+import TournamentHero from '../components/bracket/tournamentHero.js'
 
 class TournamentContainer extends React.Component {
   constructor(props) {
@@ -19,14 +20,12 @@ class TournamentContainer extends React.Component {
   }
 
   setComp (comp) {
-    console.log('this is comp', comp);
     return this.setState({
         comp: comp === this.state.comp ? '' : comp
     })
   }
 
   setTournament (tourny) {
-    console.log(tourny, 'this is settourny')
       return this.setState({
           tourny: tourny === this.state.tourny ? "" : tourny
       })
@@ -42,17 +41,13 @@ class TournamentContainer extends React.Component {
     const tournaments = tournament.edges.map(({node}) => {
       return node;
     }).find((ele) => {
-
-      return ele.title === this.state.tourny
-      
+      return ele.title === this.state.tourny  
     })
 
     return (
       <Layout>
-        <div>
-            <h1>About with Container</h1>
-            <p>With CSS Modules</p>
-        </div>
+        <TournamentHero />
+        <hr />
         <div className="events-wrapper">
           <TournamentMenu 
             comps={comps} 
@@ -75,7 +70,6 @@ export default TournamentContainer;
 
 export const pageQuery = graphql`
  { 
-   
     competition: allStrapiCompetition {
       edges {
         node {
@@ -92,11 +86,12 @@ export const pageQuery = graphql`
           title
           rounds
           total_teams
-          matches {
-            team_one
-            team_two
-            title
+          matches {      
+            tournament_name
             round
+            challenger
+            opponent
+            match_number
           }
         }
       }
