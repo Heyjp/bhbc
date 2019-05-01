@@ -1,55 +1,67 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require('path');
 
-// You can delete this file if you're not using it
-import path from 'path';
-import { graphql } from 'gatsby';
 
-exports.createPages = async function ({ actions }) {
-    const {createPage} = actions;
-   return graphql(`
-        query {
-            allStrapiArticle {
-                edges { 
-                    node {
-                        id
-                        title
-                        content
-                        created_at
-                        author {
-                            username
+exports.createPages = async function ({ actions, graphql }) {
+    const { createPage } = actions;
+    return graphql(`
+
+            {
+                pages: allStrapiPage {
+                    edges {
+                        node {
+                            id
+                            page_title
+                            page_content
+                        }
+                    }
+                }
+                articles: allStrapiArticle {
+                    edges { 
+                        node {
+                            id
+                            title
+                            content
+                            createdAt
                         }
                     }
                 }
             }
-        }
+
     `).then(result => {
-        result.data.allStrapiArticle.edges.forEach(({node}) => {
+        result.data.articles.edges.forEach(({node}) => {
             createPage({
-                path: `${node.node.id}`,
+                path: `/news/${node.id}`,
                 component: path.resolve(`./src/components/templates/article.js`),
                 context: {
-                    id: node.node.id
+                    id: node.id
+                }
+            })
+        })
+
+        result.data.pages.edges.forEach(({node}) => {
+            console.log(node, 'this is node');
+            createPage({
+                path: `/page/${node.page_title}`,
+                component: path.resolve(`./src/components/templates/page.js`),
+                context: {
+                    id: node.id
                 }
             })
         })
     })
 }
 
-// // Called after every page is created
-// exports.onCreatePage = async ({ page, actions }) => {
-//     const { createPage } = actions
+// Called after every page is created
+exports.onCreatePage = async ({ page, actions }) => {
+    const { createPage } = actions
 
-//     // page.matchPath is special key thats used for matching apges
-//     // only on the client
+    // page.matchPath is special key thats used for matching apges
+    // only on the client
 
-//     if (page.path.match(/^\/app/)) {
-//         page.matchPath = "/app/*"
+    if (page.path.match(/^\/app/)) {
+        page.matchPath = "/app/*"
 
-//         //Update the page
-//         createPage(page)
-//     }
-// }
+        //Update the page
+        createPage(page)
+    }
+}

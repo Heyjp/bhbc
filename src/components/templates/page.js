@@ -7,6 +7,7 @@ import ReactMarkdown from 'react-markdown';
 
 const PageTemplate = ({data}) => {
     const {page_title, page_content }= data.strapiPage;
+    console.log(data, 'this is data on page template');
     return (
         <Layout>
             <div className="container">
@@ -14,16 +15,6 @@ const PageTemplate = ({data}) => {
                     <div className="columns is-centered"> 
                         <div className="column is-four-fifths ">
                             <h2 className="subtitle is-3">{page_title}</h2>
-                            <div className="level article-info">
-                                <div className="level-left">
-                                    <div className="level-item">
-                                        <h6 className="subtitle is-7 is-marginless">Created on {new Date(updatedAt).toDateString()}</h6>
-                                    </div>
-                                    <div className="level-item">
-                                        <h6 className="subtitle is-7 is-marginless has-text-grey-darker">by {author.username}</h6>
-                                    </div>
-                                </div>
-                            </div>
                             <hr className="article-break"/>
                             <ReactMarkdown source={page_content} />
                         </div>

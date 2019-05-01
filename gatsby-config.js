@@ -16,15 +16,11 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-create-client-paths`,
-      options: { prefixes: [`/app/*`] },
-    },
-    {
       resolve: 'gatsby-source-strapi',
       options: {
         apiURL: 'http://localhost:1337',
         contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
-          'article', 'file', 'fixture', 'competition', 'tournament', 'match'
+          'article', 'file', 'fixture', 'competition', 'tournament', 'match', 'page'
         ],
         queryLimit: 1000,
       },
@@ -50,8 +46,3 @@ module.exports = {
     // 'gatsby-plugin-offline',
   ],
 }
-/*
-
-        devUrl: 'http://localhost:1337',
-        prodUrl: 'https://bhbc.herokuapp.com',
-*/
