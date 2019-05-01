@@ -1,11 +1,8 @@
 import React from 'react';
 
-const competitions = ['Ladies Maynard', 'Mens Championship', 'Oldlands', 'Vets', 'Ladies 2 Woods'];
-// const tournys = ["2018", "2019"];
-
 const CompsMenu = (props) => {
     return (
-      <div>
+      <div className="menu-wrap">
         <aside className="menu">
             <p className="menu-label">
                 Club Competitions
@@ -14,11 +11,11 @@ const CompsMenu = (props) => {
                 {props.comps.map((comp, index) => {          
                     return (
                       <li key={`comp-${index}`}>
-                        <button 
-                          className="button is-outlined"
+                        <a 
+                          
                           onClick={()=> { props.setComp(comp.Name)}}
                         
-                        >{comp.Name}</button>
+                        >{comp.Name}</a>
                         {comp.Name === props.comp
                            && <TournyList
                             tourny={props.tourny}
@@ -58,40 +55,3 @@ const TournyList = (props) => {
 }
 
 export default CompsMenu;
-
-// const CompsMenu = (props) => {
-//     return (
-//       <div className={menuStyles.menuWrapper}>
-//         <aside className="menu">
-//             <p className="menu-label">
-//                 Years
-//             </p>
-//             <ul className="menu-list">
-//                 {competitions.map((comp) => {          
-//                     return (
-//                       <li key={year}>
-//                         <a 
-//                           className={comp === props.comp 
-//                           ? "is-active" 
-//                           : ""}
-//                           onClick={() => props.setComp(comp)}
-//                           >
-//                           {year}
-//                         </a>
-//                         {comp === props.comp 
-
-//                           && <CompList 
-//                                 comp={props.comp}
-//                                 setComp={props.setComp}
-//                         />}
-//                       </li>
-//                     )  
-//                     }
-//                 )}
-//             </ul>
-//         </aside>
-//       </div>
-//     )
-// }
-
-
