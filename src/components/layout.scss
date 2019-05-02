@@ -7,6 +7,7 @@ h3,
 h4,
 h5 {
     font-family: 'Work Sans', sans-serif;
+    
 }
 body {
     font-family: 'Open Sans', sans-serif;
@@ -44,8 +45,8 @@ section {
 }
 
 .box-container {
-    padding: 3rem 1.5rem 1rem;
-    min-height: 40vh;
+    padding: 3rem 1.5rem 5rem 1.5rem;
+    
 }
 
 .sponsor-container {
@@ -169,3 +170,10 @@ section {
     margin-top: 2rem;
 }
 
+.main {
+    min-height: 75vh;
+}
+
+.main-content-wrap {
+    margin-bottom: 2rem;
+}

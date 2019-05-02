@@ -3,13 +3,13 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 
 const Hero = () => (
-  <section className="hero">
+  <section className="hero is-medium is-primary is-bold">
     <div className="container">
         <div className="hero-body">
             <div className="level">
               <div className="level-left">
                 <div>
-                  <h1 className="title">
+                  <h1 className="title has-text-weight-light">
                         Burgess Hill Bowls Club
                   </h1>
                   <h4 className="subtitle is-4">
@@ -18,7 +18,9 @@ const Hero = () => (
                 </div>
               </div>
               <div className="level-right">
-                <img alt="Burgess Hill Cred" src="http://btckstorage.blob.core.windows.net/site9514/Header/New_Crest_2006_006%5B1%5D.jpg" />
+                <figure class="image is-128x128">
+                  <img alt="Burgess Hill Cred" src="https://res.cloudinary.com/dneca1h4f/image/upload/v1556803504/kt260roj6vwwzz9rfwwc.png" />
+                </figure>
               </div>
             </div>
         </div>
@@ -27,15 +29,15 @@ const Hero = () => (
 )
 
 const Main = () => (
-  <section className="content has-background-light main-container">
+  <section className="content main-container">
     <div className="container">
-        <h4 className="subtitle is-4 has-text-centered">About Our Club</h4>
-        <div className="columns">
-          <div className="column">
+        <h4 className="subtitle is-3 has-text-centered has-text-weight-light">About Our Club</h4>
+        <div className="columns is-centered">
+          
+          <div className="column is-full">
             <p>Burgess Hill Bowls Club, is the only Lawn Bowls Club in our town and is tucked away in West Hill Drive, just off Royal George Road. The club has over one hundred and fifty playing and social members and has six rinks and a modern licensed clubhouse, used on match days and for social events</p>
             <p>Our playing season begins in late April and runs through the summer months to the middle of September. The majority of our fixtures throughout the season are friendly matches with other clubs in the area, and are played on weekday and weekend afternoons.These games are a relaxed and easy way to learn, improve and play bowls. </p>
-          </div>
-          <div className="column">
+
             <p>For those players wishing to play in a more competitive arena the club enters teams in two leagues as well as players in both National and County competitions. On Monday afternoons and Friday nights there are ‘Turn up and Bowl’ drives, 
               and during the season a number of Fun drives are held such as the Candlelight match, Club Triples day, End of Season drive and others. 
               Most of these events raise money for our chosen charity. 
@@ -55,23 +57,24 @@ const Content = () => (
   <section className="content box-container">
       <div className="container">
         <div className="columns">
-          <div className="column box-column">
+          <div className="column is-one-third box-column">
             <div className="box box-vertical ">
-                <h4 className="subtitle ">Club History</h4>
+                <h4 className="subtitle is-5 has-text-weight-light">Club History</h4>
+
                 <p>Find out more about our club and get to know our commitee.</p>
                 <Link to="/history" className="button is-fullwidth has-background-success has-text-light">History</Link>
             </div>
           </div>
-          <div className="column box-column">
+          <div className="column is-one-third box-column">
             <div className="box box-vertical">
-            <h4 className="subtitle">Events</h4>
+            <h4 className="subtitle is-5 has-text-weight-light">Events</h4>
                   <p>A number of social events take place throughout the year, Quiz nights, Bingo, Club Barbeques, Jazz Nights and a Christmas Party. </p>
                   <Link to="/events" className="button is-fullwidth has-background-success has-text-light">Find our Events</Link>
               </div>
             </div>
-          <div className="column box-column">
+          <div className="column is-one-third box-column">
             <div className="box box-vertical">
-            <h4 className="subtitle">Find Us</h4>
+            <h4 className="subtitle is-5 has-text-weight-light">Find Us</h4>
                   <p>Our Green is open to members of the public, but advance booking is required and the appropriate Green Fee payable.</p> 
                   <Link to="/contact" className="button is-fullwidth has-background-success has-text-light">Contact Us</Link>
               </div>
@@ -84,10 +87,10 @@ const Content = () => (
 const Membership = () => (
   <section className="content membership-container">
     <div className="container">
-      <h2 className="subtitle is-3 has-text-centered">Join Us</h2>
-      <div className="columns is-5 " style={{"marginTop": "1rem"}}>
+      <h2 className="subtitle is-3 has-text-centered has-text-weight-light">Join Us</h2>
+      <div className="columns" style={{"marginTop": "1rem"}}>
         <div className="column" >
-          <h4 className="has-text-centered">Membership</h4>
+          <h4 className="subtitle is-5 has-text-centered">Membership</h4>
           <p>
               Should you feel like taking up a new hobby or just moving from another area or club you will be made most welcome. You don't need to be super fit, just willing to join in and enjoy yourself.
           </p>
@@ -97,7 +100,7 @@ const Membership = () => (
           </p>
         </div>
         <div className="column">
-            <h4 className="has-text-centered">Annual Subscriptions - 2018</h4>
+            <h4 className="subtitle is-5 has-text-centered">Annual Subscriptions - 2018</h4>
             <p>
                 There are currently three types are Membership: Playing, Junior and Social. 
             </p>
@@ -135,26 +138,13 @@ const Sponsors = () => (
   </section>
 )
 
-// const Articles = (props) => {  
-//   return (
-//         <ul>
-//           {props.articles.edges.map(doc => (
-//             <li key={doc.node.id}>
-//               <h2 className="subtitle is-2">
-//                 {doc.node.title}
-//               </h2>
-//               <p>{doc.node.content}</p>
-//             </li>
-//           ))}
-//         </ul>
-//       )
-//     }
-
 const IndexPage = ({data}) => {
   return (
     <Layout>
         <Hero></Hero>
+        <hr className="is-marginless" />
         <Main></Main>
+        <hr />
         <Content></Content>
         <hr />
         {/* <Articles articles={data.allStrapiArticle} /> */}

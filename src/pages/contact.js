@@ -8,11 +8,11 @@ import PhoneIcon from 'material-react-icons/Phone';
 
 export default () => (
     <Layout>
-        <section className="contact-section">
+        <section className="contact-section main-content-wrap">
             <div className="columns is-centered"> 
                 <div className="column is-four-fifths ">
                 <div className="contact">
-                    <h1 className="title is-4 has-text-centered">
+                    <h1 className="title is-4 has-text-weight-light has-text-centered">
                         Contact Burgess Hill Bowls Club
                     </h1>
                     <h4 className="subtitle is-5 has-text-centered">Visit or Drop us a line</h4>

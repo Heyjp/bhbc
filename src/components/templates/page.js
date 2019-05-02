@@ -14,9 +14,18 @@ const PageTemplate = ({data}) => {
                 <section className="content history-wrap article-wrap">
                     <div className="columns is-centered"> 
                         <div className="column is-four-fifths ">
+                            <div className="level">
+                                <nav className="breadcrumb has-succeeds-separator " aria-label="breadcrumbs">
+                                    <ul className="is-marginless">
+                                        <li><a href="#" style={{'marginTop': '0.25em'}}>Home</a></li>
+                                        <li><a href="#">News</a></li>
+                                        <li class="is-active"><a href="#" aria-current="page">Article</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
                             <h2 className="subtitle is-3">{page_title}</h2>
                             <hr className="article-break"/>
-                            <ReactMarkdown source={page_content} />
+                            <ReactMarkdown className="content" source={page_content} />
                         </div>
                     </div>
                 </section>

@@ -15,14 +15,14 @@ const EventsMenu = (props) => {
                 {years.map((year) => {          
                     return (
                       <li key={year}>
-                        <button 
+                        <a 
                           className={`${year === props.year 
                           ? "is-active" 
-                          : ""} button is-outlined `}
+                          : ""}  `}
                           onClick={() => props.setYear(year)}
                           >
                           {year}
-                        </button>
+                        </a>
                         {year === props.year 
 
                           && <MonthsList 
@@ -46,15 +46,15 @@ const MonthsList = (props) => {
             {months.map((month) => {
               return (
                 <li key={month}>
-                  <button
+                  <a
                     className={`${month === props.month 
                       ? "is-active" 
                       : ""}
-                      button is-outlined is-fullwidth
+                      
                       `}
                     onClick={() => props.setMonth(month)}>
                     {month}
-                  </button>
+                  </a>
                 </li>
               )
             })

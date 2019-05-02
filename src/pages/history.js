@@ -3,11 +3,11 @@ import Layout from '../components/layout.js';
 
 const History = () => (
     <Layout>
-        <div className="container">
+        <div className="container main-content wrap">
             <div className="columns is-centered"> 
                 <div className="column is-four-fifths ">
                     <section className="content history-wrap">
-                    <h3 className="title is-3">Our History</h3>
+                    <h3 className="title is-3 has-text-weight-light">Our History</h3>
                     <hr />
                     <p>
                         According to the local press, the first bowls match was played in Burgess Hill in 1895, and official records show the formation of the present club in 1902. The bowling green then was situated on the town lawns, located behind the Top House Public House, and made history in 1907 being the first club in Sussex to have floodlights

@@ -67,7 +67,7 @@ class EventsWrapper extends React.Component {
 
         return (
             <Layout>
-                <div className="events-wrapper">
+                <div className="events-wrapper main-content wrap">
                     <EventsMenu  
                         setMonth={this.setMonth}
                         setYear={this.setYear}
