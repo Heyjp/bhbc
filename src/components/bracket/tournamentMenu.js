@@ -2,8 +2,8 @@ import React from 'react';
 
 const CompsMenu = (props) => {
     return (
-      <div className="menu-wrap">
-        <aside className="menu">
+      <div className="menu-wrap has-background-white-bis">
+        <aside className="menu ">
             <p className="menu-label">
                 Club Competitions
             </p>
@@ -12,7 +12,9 @@ const CompsMenu = (props) => {
                     return (
                       <li key={`comp-${index}`}>
                         <a 
-                          
+                          className={comp.Name === props.comp 
+                            ? "is-active" 
+                            : ""}
                           onClick={()=> { props.setComp(comp.Name)}}
                         
                         >{comp.Name}</a>

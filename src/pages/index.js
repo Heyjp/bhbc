@@ -29,7 +29,7 @@ const Hero = () => (
 )
 
 const Main = () => (
-  <section className="content main-container">
+  <section className="content main-container has-background-white">
     <div className="container">
         <h4 className="subtitle is-3 has-text-centered has-text-weight-light">About Our Club</h4>
         <div className="columns is-centered">
@@ -54,7 +54,7 @@ const Main = () => (
 
 
 const Content = () => (
-  <section className="content box-container">
+  <section className="content box-container has-background-white-bis">
       <div className="container">
         <div className="columns">
           <div className="column is-one-third box-column">
@@ -85,7 +85,7 @@ const Content = () => (
 )
 
 const Membership = () => (
-  <section className="content membership-container">
+  <section className="content membership-container has-background-white">
     <div className="container">
       <h2 className="subtitle is-3 has-text-centered has-text-weight-light">Join Us</h2>
       <div className="columns" style={{"marginTop": "1rem"}}>
@@ -144,9 +144,8 @@ const IndexPage = ({data}) => {
         <Hero></Hero>
         <hr className="is-marginless" />
         <Main></Main>
-        <hr />
         <Content></Content>
-        <hr />
+
         {/* <Articles articles={data.allStrapiArticle} /> */}
         <Membership></Membership>
         <Sponsors></Sponsors>

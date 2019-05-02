@@ -46,8 +46,7 @@ class TournamentContainer extends React.Component {
 
     return (
       <Layout>
-        <TournamentHero />
-        <hr />
+
         <div className="events-wrapper">
           <TournamentMenu 
             comps={comps} 

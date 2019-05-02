@@ -29,7 +29,7 @@ const Layout = ({ children }) => (
       <div>
         {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
         <Nav></Nav>
-          <main className="main">{children}</main>
+          <main className="main has-background-white ">{children}</main>
         <Footer></Footer>
       </div>
     )}

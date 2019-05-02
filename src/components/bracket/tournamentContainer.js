@@ -1,10 +1,9 @@
 import React from 'react';
 import tournamentStyles from './tournament.module.scss';
-
+import TournamentHero from './tournamentHero';
 
 
 const MatchHeader = (props) => {
-    console.log(props.matchNum, 'this is matchNUm')
     return (
     <div className={`${tournamentStyles.matchHeader}`}>
         <p className="has-text-info">G{props.matchNum}</p>
@@ -72,6 +71,8 @@ const Round = (props) =>  {
 
 const TournamentContainer = (props) => (
     <div style={{'width': '100%'}}>
+        <TournamentHero />
+        <hr />
         <div className="columns is-centered">
             <div className="column is-four-fifths is-full-mobile">
                 <div className={tournamentStyles.container}>
@@ -105,7 +106,6 @@ function createPrelims (totalMatches, matches, prelimMatchLength) {
     
        return prelimArray.map((e, index) => {
             // see if there is a match num
-            console.log(matches, 'this is matches')
             let match = matches.find((match) => match.match_number === index+1);
             // if there is a "match" enter details else return an empty match
             if (match) {
@@ -156,7 +156,6 @@ function populateRound (totalTeams, matches, prelim) {
 
 const createRounds = (tournament) => {
     const { matches, total_teams } = tournament;
-    console.log(matches, 'this is matches on create round')
     let isPrelim = false;
 
     // Work out whether there is a perfect bracket size or not

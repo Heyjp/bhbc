@@ -6,7 +6,7 @@ const years = ["2018", "2019"];
 
 const EventsMenu = (props) => {
     return (
-      <div className={menuStyles.menuWrapper}>
+      <div className={`has-background-white-bis ${menuStyles.menuWrapper}`}>
         <aside className="menu">
             <p className="menu-label">
                 Years

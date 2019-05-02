@@ -16,11 +16,12 @@ body {
 section {
         padding: 0 2rem;
         &.main-container, &.membership-container {
-            min-height: 50vh;
+            min-height: 40vh;
             padding-top: 3rem;
             padding-bottom: 3rem;
             display: flex;
             align-items: center;
+            margin-bottom: 0px !important;
         }
 }
 
@@ -83,6 +84,7 @@ section {
     display: flex;
     flex-direction: row;
     margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
 .events-main {
@@ -166,14 +168,23 @@ section {
 }
 
 .menu-wrap {
-    margin: 3rem;
-    margin-top: 2rem;
+    padding: 3rem;
 }
 
 .main {
-    min-height: 75vh;
+    min-height: 80vh;
+    margin-top: -15px;
+    margin-bottom: -30px;
 }
 
 .main-content-wrap {
     margin-bottom: 2rem;
+}
+
+.sidebar-menu {
+    margin-top: -10px;
+}
+
+.navbar-item:hover {
+    color: hsl(171, 100%, 41%) !important;
 }
