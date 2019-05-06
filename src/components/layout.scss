@@ -83,7 +83,6 @@ section {
 .events-wrapper{
     display: flex;
     flex-direction: row;
-    margin-top: 1rem;
     margin-bottom: 2rem;
 }
 
@@ -173,8 +172,6 @@ section {
 
 .main {
     min-height: 80vh;
-    margin-top: -15px;
-    margin-bottom: -30px;
 }
 
 .main-content-wrap {
@@ -187,4 +184,29 @@ section {
 
 .navbar-item:hover {
     color: hsl(171, 100%, 41%) !important;
+    border-bottom: 2px solid hsl(171, 100%, 41%);
 }
+
+.trophy-header {
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.league-fixture-wrap {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.league-table-container {
+    margin-bottom: 3.5rem;
+    margin-top: 3rem;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .navbar-item:hover {
+        border-bottom: none;
+    }
+
+}
+

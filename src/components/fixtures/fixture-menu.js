@@ -1,10 +1,10 @@
 import React from 'react';
-import menuStyles from './events.menus.module.scss'
+import menuStyles from './fixture-menu.module.scss'
 
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-const years = ["2018", "2019"];
+const years = ["2019"];
 
-const EventsMenu = (props) => {
+const FixtureMenu = (props) => {
     return (
       <div className={`has-background-white-bis ${menuStyles.menuWrapper}`}>
         <aside className="menu">
@@ -63,4 +63,4 @@ const MonthsList = (props) => {
     )
 }
 
-export default EventsMenu;
+export default FixtureMenu;

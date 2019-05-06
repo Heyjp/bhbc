@@ -4,10 +4,10 @@ import Moment from 'moment';
 import {graphql} from 'gatsby';
 
 
-import Events from '../components/events/events-table.js';
-import EventsMenu from '../components/events/events.menus.js';
+import Fixtures from '../components/fixtures/fixture-table.js';
+import FixturesMenu from '../components/fixtures/fixture-menu.js';
 
-class EventsWrapper extends React.Component {
+class FixturesWrapper extends React.Component {
     constructor(props) {
         super(props);
 
@@ -57,7 +57,7 @@ class EventsWrapper extends React.Component {
     }
     
     render() {
-        const events = this.props.data.allStrapiFixture.edges.filter(({node}) => {
+        const fixtures = this.props.data.allStrapiFixture.edges.filter(({node}) => {
             const date = new Date(node.date);
             const year = Moment(date).format('YYYY');
             const month = Moment(date).format('MMMM');
@@ -68,15 +68,15 @@ class EventsWrapper extends React.Component {
         return (
             <Layout>
                 <div className="events-wrapper main-content wrap">
-                    <EventsMenu  
+                    <FixturesMenu  
                         setMonth={this.setMonth}
                         setYear={this.setYear}
                         year={this.state.year}
                         month={this.state.month}
                     />
-                    <Events 
-                        events={this.state.filter 
-                            ? events 
+                    <Fixtures 
+                        fixtures={this.state.filter 
+                            ? fixtures 
                             : this.props.data.allStrapiFixture.edges
                         }
                         year={this.state.year}
@@ -88,9 +88,9 @@ class EventsWrapper extends React.Component {
     }
 }
 
-export default EventsWrapper;
+export default FixturesWrapper;
 
-export const eventsQuery = graphql`
+export const fixturesQuery = graphql`
   query EventsQuery {
     allStrapiFixture {
       edges {

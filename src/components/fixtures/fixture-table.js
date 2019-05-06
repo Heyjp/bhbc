@@ -1,16 +1,16 @@
 import React from 'react';
-import tableStyles from './events-table.module.scss'
+import tableStyles from './fixture-table.module.scss'
 
-const EventItem = ({event}) => (
+const Fixture = ({fixture}) => (
         <div className="box">
             <div className="level is-marginless">
                 <div className="level-left">
                     <div className="level-item">
-                        <DateBox date={event.date} />
+                        <DateBox date={fixture.date} />
                     </div>
                     <div className="level-item">
-                        <EventDescription 
-                            name={event.opponent} 
+                        <FixtureDescription 
+                            name={fixture.opponent} 
                          />
                     </div>
                 </div>
@@ -18,26 +18,26 @@ const EventItem = ({event}) => (
                     <div className="level-item has-text-centered">
                         <div>
                             <p className="heading has-text-weight-bold">Location</p>    
-                            <p className="heading">{event.venue}</p>
+                            <p className="heading">{fixture.venue}</p>
                         </div>
                     </div>
                     <div className="level-item has-text-centered">
                         <div>
-                            <p className="heading">{event.match}</p>
-                            <p className="heading">{event.match_type}</p>
+                            <p className="heading">{fixture.match}</p>
+                            <p className="heading">{fixture.match_type}</p>
 
                         </div>
                     </div>
                     <div className="level-item">
                         <div>
-                            <p className="heading">{event.format || 'Mixed'}</p>
+                            <p className="heading">{fixture.format || 'Mixed'}</p>
                         </div>
                     </div>
                     <div className="level-item">
                         <div>
                             <p className="heading">Result</p>
-                            {event.Result && <p className="title is-5">{event.result}</p>}
-                            {!event.Result && <p className="title is-5">TBC</p>}
+                            {fixture.Result && <p className="title is-5">{fixture.result}</p>}
+                            {!fixture.Result && <p className="title is-5">TBC</p>}
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@ const EventItem = ({event}) => (
 
             <p className="heading is-marginless">Start time:
                 <span className="has-text-weight-semibold">
-                    { "14:00" || new Date(event.date).toLocaleTimeString() }
+                    { "14:00" || new Date(fixture.date).toLocaleTimeString() }
                 </span>
              </p>
         </div>
@@ -63,7 +63,7 @@ const DateBox = ({date}) => {
     )
 }
 
-const EventDescription = ({name, description}) => (
+const FixtureDescription = ({name, description}) => (
     <div className={tableStyles.descWrap}>
         <p className="heading">Opponent</p>
         <h1 className={`has-text-weight-semibold`}>{name}</h1>
@@ -71,17 +71,8 @@ const EventDescription = ({name, description}) => (
     </div>
 )
 
-// const EventTags = () => (
-//     <div className="tags are-small">
-//         <span className="tag is-primary">Home</span>
-//         <span className="tag is-info">Triples</span>
-//         <span className="tag is-warning">Mixed</span>
-//         <span className="tag is-success">Medium</span>
-//     </div>
-// )
 
-
-export default ({events, year, month}) => {
+export default ({fixtures, year, month}) => {
     return (
             <div className="columns" style={{'width': '70%', 'maxWidth': '70%'}}> 
                 <div className="column is-full">
@@ -90,13 +81,13 @@ export default ({events, year, month}) => {
                         <h1 className="subtitle is-2">{month}</h1>
                         <hr />
                         {
-                            events.map(({node}) => {
+                            fixtures.map(({node}) => {
                                 return (
-                                    <EventItem key={node.id} event={node} />
+                                    <Fixture key={node.id} fixture={node} />
                                 )
                             }) 
                         }
-                        {!events.length && <p>Currently no events</p>}
+                        {!fixtures.length && <p>Currently no fixtures</p>}
                     </section>
                 </div>
             </div>

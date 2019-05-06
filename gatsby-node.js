@@ -4,7 +4,6 @@ const path = require('path');
 exports.createPages = async function ({ actions, graphql }) {
     const { createPage } = actions;
     return graphql(`
-
             {
                 pages: allStrapiPage {
                     edges {
@@ -39,7 +38,6 @@ exports.createPages = async function ({ actions, graphql }) {
         })
 
         result.data.pages.edges.forEach(({node}) => {
-            console.log(node, 'this is node');
             createPage({
                 path: `/page/${node.page_title}`,
                 component: path.resolve(`./src/components/templates/page.js`),

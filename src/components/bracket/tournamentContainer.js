@@ -6,7 +6,7 @@ import TournamentHero from './tournamentHero';
 const MatchHeader = (props) => {
     return (
     <div className={`${tournamentStyles.matchHeader}`}>
-        <p className="has-text-info">G{props.matchNum}</p>
+        <p className="has-text-weight-semibold has-text-info">G{props.matchNum}</p>
     </div>
     )
 }
@@ -41,7 +41,7 @@ const RoundTitle = (props) => {
     }
 
    return (
-        <div className={`subtitle is-6 ${tournamentStyles.title}`}>
+        <div className={`subtitle is-4 ${tournamentStyles.title}`}>
             <h5 className={tournamentStyles.titleText}>{`${isNaN(round) ? round : `Round ${round}`}` }</h5>
         </div>
     )
@@ -87,12 +87,6 @@ const TournamentContainer = (props) => (
 
 
 export default TournamentContainer;
-
-// function divByTwo (a,b = 2, index = 1) {
-// 	let ans = a / b;	
-//     if (ans <= 1) return index;
-//  	return divByTwo(ans, b, index+1);
-// }
 
 function createPrelims (totalMatches, matches, prelimMatchLength) {
 

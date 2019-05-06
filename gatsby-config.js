@@ -20,7 +20,7 @@ module.exports = {
       options: {
         apiURL: 'http://localhost:1337',
         contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
-          'article', 'file', 'fixture', 'competition', 'tournament', 'match', 'page'
+          'article', 'file', 'fixture', 'competition', 'tournament', 'match', 'page', 'entry', 'leaguefixture'
         ],
         queryLimit: 1000,
       },
