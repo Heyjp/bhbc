@@ -20,7 +20,7 @@ export default () => (
                     <Link to="/" className="has-text-white">Home</Link>
                 </div>
                 <div className="level-item">
-                    <Link to="/about" className="has-text-white">About</Link>
+                    <Link to="/history" className="has-text-white">About</Link>
 
                 </div>
                 <div className="level-item">
