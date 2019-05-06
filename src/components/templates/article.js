@@ -1,17 +1,28 @@
 import React from 'react';
 import Layout from '../../components/layout' 
-import { graphql } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 
 import ReactMarkdown from 'react-markdown';
 
 const ArticleTemplate = ({data}) => {
-    const {title, content, author, updatedAt }= data.strapiArticle;
+    const {title, content, updatedAt, user }= data.strapiArticle;
+
     return (
         <Layout>
             <div className="container">
                 <section className="content history-wrap article-wrap">
                     <div className="columns is-centered"> 
-                        <div className="column is-four-fifths ">
+                        
+                        <div className="column is-four-fifths">
+                        <div className="level">
+                            <nav className="breadcrumb has-succeeds-separator " aria-label="breadcrumbs">
+                                <ul className="is-marginless">
+                                    <li><a href="#" style={{'marginTop': '0.25em'}}>Home</a></li>
+                                    <li><a href="#">News</a></li>
+                                    <li class="is-active"><a href="#" aria-current="page">Article</a></li>
+                                </ul>
+                            </nav>
+                        </div>
                             <h2 className="subtitle is-3">{title}</h2>
                             <div className="level article-info">
                                 <div className="level-left">
@@ -19,12 +30,13 @@ const ArticleTemplate = ({data}) => {
                                         <h6 className="subtitle is-7 is-marginless">Created on {new Date(updatedAt).toDateString()}</h6>
                                     </div>
                                     <div className="level-item">
-                                        <h6 className="subtitle is-7 is-marginless has-text-grey-darker">by {author.username}</h6>
+                                        <h6 className="subtitle is-7 is-marginless has-text-grey-darker">by {user.username} </h6>
                                     </div>
                                 </div>
                             </div>
                             <hr className="article-break"/>
-                            <ReactMarkdown source={content} />
+                            <ReactMarkdown className="content" source={content}
+                            />
                         </div>
                     </div>
                 </section>
@@ -32,9 +44,16 @@ const ArticleTemplate = ({data}) => {
         </Layout>
     )}
 
-export default ArticleTemplate;
-
-export const query = graphql`
+export default () => (
+    <StaticQuery 
+        query={query}
+        render={data => (
+            <ArticleTemplate data={data} />
+        )}
+    />
+    )
+    
+const query = graphql`
     query ($id: String) {
         strapiArticle(id: {eq: $id}) {
             title

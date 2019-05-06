@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, navigate } from "gatsby"
 
 
-import { getUser, isLoggedIn, logout } from "../../services/auth";
+import { isLoggedIn, logout } from "../../services/auth";
 
 class Nav extends React.Component {
     
@@ -28,7 +28,7 @@ class Nav extends React.Component {
                         <p className="title">BH<span className="has-text-primary">BC</span></p>
                     </Link>
 
-                    <a role="button" 
+                    <a  
                         className={`navbar-burger ${this.state.activeNav ? 'is-active' : ''}`}
                          data-target="navMenu" 
                          aria-label="menu" 
@@ -65,15 +65,22 @@ class Nav extends React.Component {
                         <Link className="navbar-item" to="/news">
                             News
                         </Link>
-                        <Link className="navbar-item" to="/events">
-                            Events
+                        <Link className="navbar-item" to="/fixtures">
+                            Fixtures
                         </Link>
-                        <Link className="navbar-item" to="/rules">
-                            Rules
-                        </Link>
-                        {/* <Link className="navbar-item" to="/tournament">
-                            Tournament
-                        </Link> */}
+                        <div className="navbar-item has-dropdown is-hoverable">
+                            <Link className="navbar-item" to="/competitions">
+                                Competitions
+                            </Link>
+                            <div className="navbar-dropdown">
+                                <Link className="navbar-item" to="/trophy">
+                                    Nicholas Soames Trophy
+                                </Link>
+                                <Link className="navbar-item" to="/rules">
+                                    Rules
+                                </Link>
+                            </div>
+                        </div>
                         <Link className="navbar-item" to="/contact">
                             Contact
                         </Link>

@@ -1,12 +1,12 @@
 import React from 'react';
-import menuStyles from './events.menus.module.scss'
+import menuStyles from './fixture-menu.module.scss'
 
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-const years = ["2018", "2019"];
+const years = ["2019"];
 
-const EventsMenu = (props) => {
+const FixtureMenu = (props) => {
     return (
-      <div className={menuStyles.menuWrapper}>
+      <div className={`has-background-white-bis ${menuStyles.menuWrapper}`}>
         <aside className="menu">
             <p className="menu-label">
                 Years
@@ -16,9 +16,9 @@ const EventsMenu = (props) => {
                     return (
                       <li key={year}>
                         <a 
-                          className={year === props.year 
+                          className={`${year === props.year 
                           ? "is-active" 
-                          : ""}
+                          : ""}  `}
                           onClick={() => props.setYear(year)}
                           >
                           {year}
@@ -46,10 +46,12 @@ const MonthsList = (props) => {
             {months.map((month) => {
               return (
                 <li key={month}>
-                  <a 
-                    className={month === props.month 
+                  <a
+                    className={`${month === props.month 
                       ? "is-active" 
                       : ""}
+                      
+                      `}
                     onClick={() => props.setMonth(month)}>
                     {month}
                   </a>
@@ -61,4 +63,4 @@ const MonthsList = (props) => {
     )
 }
 
-export default EventsMenu;
+export default FixtureMenu;

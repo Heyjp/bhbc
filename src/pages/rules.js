@@ -6,7 +6,7 @@ import Layout from '../components/layout.js';
 const RuleBox = () => (
     <div className="column rule-wrap">
         <div className="box has-background-light">
-            <h5 className="subtitle is-5">Rules</h5>
+            <h5 className="subtitle is-5 ">Rules</h5>
             <div className="content is-small">
                 <ol type="1">
                     <li>
@@ -32,7 +32,7 @@ const RuleBox = () => (
 
 const Competitions = () => (
     <div className="column is-three-fifths comp-wrap">
-        <h1 className="title title-spacer">Competitions</h1>
+        <h1 className="title title-spacer has-text-weight-light">Competitions</h1>
         <hr />
         <h3 className="subtitle is-4">Ladies Competitions</h3>
         <div className="divSpacer">
@@ -100,7 +100,7 @@ const Competitions = () => (
 
 export default () => (
     <Layout>
-        <div className="container">
+        <div className="container main-content-wrap">
             <section className="content">
                     <div className="columns">
                         <Competitions />

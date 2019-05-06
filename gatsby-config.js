@@ -16,15 +16,11 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-create-client-paths`,
-      options: { prefixes: [`/app/*`] },
-    },
-    {
       resolve: 'gatsby-source-strapi',
       options: {
-        apiURL: 'https://bhbc.herokuapp.com',
+        apiURL: 'http://localhost:1337',
         contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
-          'article', 'file', 'fixture'
+          'article', 'file', 'fixture', 'competition', 'tournament', 'match', 'page', 'entry', 'leaguefixture'
         ],
         queryLimit: 1000,
       },
