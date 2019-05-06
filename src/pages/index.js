@@ -127,12 +127,18 @@ const Sponsors = () => (
   <section className="sponsor-container has-background-light">
       <h2 className="subtitle has-text-centered">Sponsors</h2>
       <div className="columns is-centered">
-        <div className="column is-half level">  
-          <figure className="image is-128x128 container">
-            <Link to="http://www.karrenharriswm.co.uk">
-              <img alt="sponsor logo" src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Ffta-ez-prod%2Fez%2Fimages%2F3%2F6%2F4%2F6%2F1386463-1-eng-GB%2Fsjp.jpg%3Fv1?width=700&source=ftadviser" />
-            </Link>
-          </figure>
+        <div className="column is-half level"> 
+          <div className="level-item">
+            <div className="sponsor-item has-text-centered">
+              <figure className="image">
+                <a href="https://www.karenharriswm.co.uk/">
+                  <img className="sponsor-size" alt="sponsor logo" src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Ffta-ez-prod%2Fez%2Fimages%2F3%2F6%2F4%2F6%2F1386463-1-eng-GB%2Fsjp.jpg%3Fv1?width=700&source=ftadviser" />           
+                </a>
+              </figure>
+              <p className="heading">Karren Harris <br/> Wealth Management</p>
+            </div>
+
+          </div>
         </div>
       </div>
   </section>
