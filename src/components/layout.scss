@@ -202,6 +202,19 @@ section {
     margin-top: 3rem;
 }
 
+.sponsor-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sponsor-size {
+    width: 154px !important;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
 @media screen and (max-width: 1000px) {
 
     .navbar-item:hover {
