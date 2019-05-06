@@ -1,7 +1,6 @@
 import React from 'react';
 
 const LeagueTable = ({entries}) => {
-    console.log(entries, 'this is entires');
     const { edges: teams } = entries
     const ROUNDS = [1, 2, 3, 4];
     let pools = [];

@@ -7,7 +7,6 @@ import ReactMarkdown from 'react-markdown';
 
 const PageTemplate = ({data}) => {
     const {page_title, page_content }= data.strapiPage;
-    console.log(data, 'this is data on page template');
     return (
         <Layout>
             <div className="container">
