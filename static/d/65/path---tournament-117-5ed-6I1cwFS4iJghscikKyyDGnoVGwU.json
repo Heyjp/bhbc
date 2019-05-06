@@ -1,0 +1,1 @@
+{"errors":[{"message":"Field \"tournament\" must not have a selection since type \"String\" has no subfields.","locations":[{"line":6,"column":20}]}],"pageContext":{"isCreatedByStatefulCreatePages":true}}
