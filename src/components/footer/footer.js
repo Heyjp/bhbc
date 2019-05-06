@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 export default () => (
     <footer className="footer has-background-grey-dark">
@@ -16,18 +17,18 @@ export default () => (
             <hr className="has-background-white" />
             <div className="level">
                 <div className="level-item">
-                    <p className="has-text-white">Home</p>
+                    <Link to="/" className="has-text-white">Home</Link>
                 </div>
                 <div className="level-item">
-                    <p className="has-text-white">About</p>
+                    <Link to="/about" className="has-text-white">About</Link>
 
                 </div>
                 <div className="level-item">
-                 <p className="has-text-white">Events</p>
+                 <Link to="/fixtures" className="has-text-white">Fixtures</Link>
 
                 </div>
                 <div className="level-item">
-                  <p className="has-text-white">Contact</p>
+                  <Link to="/contact" className="has-text-white">Contact</Link>
                 </div>
             </div>
         </div>
