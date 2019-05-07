@@ -30,7 +30,7 @@ const Fixture = ({fixture}) => (
                     </div>
                     <div className="level-item">
                         <div>
-                            <p className="heading">{fixture.format || 'Mixed'}</p>
+                            <p className="heading">{fixture.teams || 'Mixed'}</p>
                         </div>
                     </div>
                     <div className="level-item">
