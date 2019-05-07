@@ -18,7 +18,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-strapi',
       options: {
-        apiURL: `http://localhost:1337`,
+        apiURL: `https://bhbc.herokuapp.com`,
         contentTypes: [ 
           'article', 'file', 'fixture', 'competition', 'tournament', 'match', 'page', 'entry', 'leaguefixture'
         ],
