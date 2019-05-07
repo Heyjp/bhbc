@@ -30,7 +30,7 @@ const ArticleTemplate = ({data}) => {
                                         <h6 className="subtitle is-7 is-marginless">Created on {new Date(updatedAt).toDateString()}</h6>
                                     </div>
                                     <div className="level-item">
-                                        <h6 className="subtitle is-7 is-marginless has-text-grey-darker">by {user.username} </h6>
+                                        {/* <h6 className="subtitle is-7 is-marginless has-text-grey-darker">by {user.username} </h6> */}
                                     </div>
                                 </div>
                             </div>
@@ -58,9 +58,6 @@ const query = graphql`
         strapiArticle(id: {eq: $id}) {
             title
             content
-            user {
-                username
-            }
             updatedAt
         }
     }
