@@ -5,7 +5,7 @@ import { graphql, StaticQuery } from 'gatsby';
 import ReactMarkdown from 'react-markdown';
 
 const ArticleTemplate = ({data}) => {
-    const {title, content, updatedAt, user }= data.strapiArticle;
+    const {title, content, updatedAt }= data.strapiArticle;
 
     return (
         <Layout>

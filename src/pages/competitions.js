@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 
 import Tournament from "../components/bracket/tournamentContainer.js"
 import TournamentMenu from '../components/bracket/tournamentMenu.js';
-import TournamentHero from '../components/bracket/tournamentHero.js'
 
 class TournamentContainer extends React.Component {
   constructor(props) {

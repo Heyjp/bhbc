@@ -3,28 +3,29 @@ import Layout from '../components/layout.js';
 
 export default () => (
     <Layout>
-        <section className="content commmittee-wrap">
-            <div className="container ">
-                <div className="columns is-centered"> 
-                    <div className="column is-four-fifths ">
-                        <h1 className="title is-4 has-text-centered">Your Officers and GMC 2018</h1>
-                        <div className="columns">
-                            <div className="column">
-                                <CommitteeTable />
+        <div className="container ">
+            <section className="content commmittee-wrap">
+                    <div className="columns"> 
+                        <div className="column ">
+                            <h1 className="title is-3 has-text-weight-light">Your Officers and GMC 2019</h1>
+                            <hr />
+                            <div className="columns">
+                                <div className="column is-two-fifths">
+                                    <CommitteeTable />
+                                </div>
+                                <div className="column">
+                                    <img alt="burgess hill bowls club commitee group" gatsrc="/static/Committee-edc591dd6fa7b0c638b0a1e5e896748b.JPG" />
+                                </div>
                             </div>
-                            <div className="column">
-                            
-                            </div>
-                        </div>
-                    </div>   
-                </div>
-            </div>
-        </section>
+                        </div>   
+                    </div>
+            </section>
+        </div>
     </Layout>      
 )
 
 const CommitteeTable = () => (
-    <table>
+    <table className="table is-bordered is-striped">
         <thead>
             <tr color="primary">
                 <td>Position</td>
@@ -36,6 +37,10 @@ const CommitteeTable = () => (
                 <td colSpan="2" >Officers</td>
             </tr>
             <tr>
+                <td>President</td>
+                <td>Mick Pollard</td>
+            </tr>
+            <tr>
                 <td>Chairman</td>
                 <td>Gary Player</td>
             </tr>
@@ -45,23 +50,32 @@ const CommitteeTable = () => (
             </tr>
             <tr>
                 <td>Treasurer</td>
-                <td>Basil Larkins</td>
+                <td>Paul Bremner</td>
             </tr>
             <tr>
                 <td>Match Secretary</td>
-                <td>David Antliff</td>
-            </tr>
-            <tr>
-                <td>Membership Secretary</td>
                 <td>Christine Salter</td>
             </tr>
             <tr>
+                <td>Membership Secretary</td>
+                <td>Anne Barnes</td>
+            </tr>
+            <tr>
                 <td>Men's Captain</td>
-                <td>Malcolm Mackenzie</td>
+                <td>Graham Corbitt</td>
             </tr>
             <tr>
                 <td>Ladies Captain</td>
                 <td>Hazel Jordan</td>
+            </tr>
+            <tr>
+                <td rowSpan="3">Commitee Members</td>
+                <td>Malcolm Mackenzie</td>
+            </tr>
+            <tr>
+                <td>Jane Mckenzie</td>
+            </tr>   <tr>
+                <td>Carol Masters</td>
             </tr>
         </tbody>
     </table>

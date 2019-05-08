@@ -39,15 +39,15 @@ const Files = (props) =>  {
 export default () => (
   <StaticQuery
     query={graphql`
-      query ProfileQuery {
-        allStrapiFile {
+      query MinutesQuery {
+        allStrapiMinute {
           edges {
             node {
               id
-              name
+              title
               date
               file {
-                url
+                publicURL
               }
             }
           }
