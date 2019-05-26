@@ -79,11 +79,9 @@ class FixturesWrapper extends React.Component {
         let totalFixtures = fixtures.length;
 
         if (totalFixtures > 5) {
-            fixtures = fixtures.slice(this.state.page - 1, this.state.page + 4);
+            fixtures = fixtures.slice(0 +(5*this.state.page), 5 + (5*this.state.page));
         }
         
-        
-
         return (
             <Layout>
                 <div className="events-wrapper main-content wrap">

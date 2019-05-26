@@ -74,7 +74,7 @@ const FixtureDescription = ({name, description}) => (
 const Pagination = ({length, setPage, page}) => {
     let pages = [];
 
-    let pageIndex = 1;
+    let pageIndex = 0;
     let index = 0;
 
     while (index < length) {
@@ -120,7 +120,7 @@ const Pagination = ({length, setPage, page}) => {
                                      aria-current="page"
                                      onClick={() => setPage(item)}
                                      >
-                                        {item}
+                                        {item +1}
                                      </a>
                             </li>
                         )
