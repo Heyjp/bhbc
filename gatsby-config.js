@@ -20,7 +20,7 @@ module.exports = {
       options: {
         apiURL: `http://localhost:1337`,
         contentTypes: [ 
-          'article', 'minute', 'fixture', 'competition', 'tournament', 'match', 'page', 'entry', 'leaguefixture', 'image'
+          'article', 'minute', 'fixture', 'competition', 'tournament', 'match', 'page', 'entry', 'leaguefixture', 'photo'
         ],
         queryLimit: 1000,
       },

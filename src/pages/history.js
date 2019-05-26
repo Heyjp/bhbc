@@ -3,7 +3,7 @@ import Layout from '../components/layout.js';
 
 const History = () => (
     <Layout>
-        <div className="container main-content wrap">
+        <div className="container main-content-wrap">
             <div className="columns is-centered"> 
                 <div className="column is-four-fifths ">
                     <section className="content history-wrap">

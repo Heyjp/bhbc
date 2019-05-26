@@ -18,7 +18,7 @@ section {
         &.main-container, &.membership-container {
             min-height: 40vh;
             padding-top: 3rem;
-            padding-bottom: 3rem;
+            padding-bottom: 6rem;
             display: flex;
             align-items: center;
             margin-bottom: 0px !important;
@@ -46,12 +46,13 @@ section {
 }
 
 .box-container {
-    padding: 3rem 1.5rem 5rem 1.5rem;
+    padding: 7rem 1.5rem 7rem 1.5rem;
     
 }
 
 .sponsor-container {
-    padding-top: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
 
 }
 
@@ -188,7 +189,6 @@ section {
 }
 
 .trophy-header {
-    margin-top: 2.5rem;
     margin-bottom: 3rem;
 }
 
@@ -215,6 +215,14 @@ section {
     margin-bottom: 1rem;
 }
 
+.gallery-header {
+    margin-top: 1rem;
+    padding: 3rem;
+}
+
+.box-full {
+    width: 100%;
+}
 @media screen and (max-width: 1000px) {
 
     .navbar-item:hover {

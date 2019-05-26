@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, navigate } from "gatsby"
 
-
 import { isLoggedIn, logout } from "../../services/auth";
 
 class Nav extends React.Component {
@@ -27,7 +26,6 @@ class Nav extends React.Component {
                     <Link className="navbar-item" to="/">
                         <p className="title">BH<span className="has-text-primary">BC</span></p>
                     </Link>
-
                     <a  
                         className={`navbar-burger ${this.state.activeNav ? 'is-active' : ''}`}
                          data-target="navMenu" 
@@ -64,6 +62,9 @@ class Nav extends React.Component {
                         </div>
                         <Link className="navbar-item" to="/news">
                             News
+                        </Link>
+                        <Link className="navbar-item" to="/gallery">
+                            Gallery
                         </Link>
                         <Link className="navbar-item" to="/fixtures">
                             Fixtures

@@ -58,10 +58,10 @@ const Content = () => (
       <div className="container">
         <div className="columns">
           <div className="column is-one-third box-column">
-            <div className="box box-vertical ">
+            <div className="box box-vertical box-full">
                 <h4 className="subtitle is-5 has-text-weight-light">Club History</h4>
 
-                <p>Find out more about our club and get to know our commitee.</p>
+                <p>Find out more about our club history.</p>
                 <Link to="/history" className="button is-fullwidth has-background-success has-text-light">History</Link>
             </div>
           </div>
@@ -69,7 +69,7 @@ const Content = () => (
             <div className="box box-vertical">
             <h4 className="subtitle is-5 has-text-weight-light">Events</h4>
                   <p>A number of social events take place throughout the year, Quiz nights, Bingo, Club Barbeques, Jazz Nights and a Christmas Party. </p>
-                  <Link to="/events" className="button is-fullwidth has-background-success has-text-light">Find our Events</Link>
+                  <Link to="/fixtures" className="button is-fullwidth has-background-success has-text-light">Find our Events</Link>
               </div>
             </div>
           <div className="column is-one-third box-column">
@@ -88,7 +88,7 @@ const Membership = () => (
   <section className="content membership-container has-background-white">
     <div className="container">
       <h2 className="subtitle is-3 has-text-centered has-text-weight-light">Join Us</h2>
-      <div className="columns" style={{"marginTop": "1rem"}}>
+      <div className="columns" style={{"marginTop": "3rem"}}>
         <div className="column" >
           <h4 className="subtitle is-5 has-text-centered">Membership</h4>
           <p>
@@ -126,7 +126,7 @@ const Membership = () => (
 const Sponsors = () => (
   <section className="sponsor-container has-background-light">
       <h2 className="subtitle has-text-centered">Sponsors</h2>
-      <div className="columns is-centered">
+      <div className="columns is-centered isvcentered">
         <div className="column is-half level"> 
           <div className="level-item">
             <div className="sponsor-item has-text-centered">
