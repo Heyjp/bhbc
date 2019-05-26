@@ -14,20 +14,21 @@ class FixturesWrapper extends React.Component {
         this.state = {
             year: '',
             month: '',
-            filter: false
+            filter: false,
+            page: 1
         }
 
         this.toggleMenu = false;
         this.months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
         this.setYear = this.setYear.bind(this);
         this.setMonth = this.setMonth.bind(this);
+        this.setPage = this.setPage.bind(this);
     }
 
     componentDidMount() {
 
         const year = Moment().format('YYYY');
         const month = Moment().format('MMMM');
-
 
         return this.setState({
             month,
@@ -45,25 +46,43 @@ class FixturesWrapper extends React.Component {
     setYear (year) {
         return this.setState({
             year: year === this.state.year ? "" : year,
-            filter: !this.filter
         })
     }
 
     setMonth (month) {
         return this.setState({
             month: month === this.state.month ? "" : month,
-            filter: !this.filter
+        })
+    }
+
+    setPage (page) {
+
+        if (page === this.state.page) {
+            return false;
+        }
+
+        return this.setState({
+            page
         })
     }
     
     render() {
-        const fixtures = this.props.data.allStrapiFixture.edges.filter(({node}) => {
-            const date = new Date(node.date);
-            const year = Moment(date).format('YYYY');
-            const month = Moment(date).format('MMMM');
+        
+        let fixtures = this.props.data.allStrapiFixture.edges.slice()
+            .filter(({node}) => {
+                const date = new Date(node.date);
+                const year = Moment(date).format('YYYY');
+                const month = Moment(date).format('MMMM');
 
-            return year === this.state.year && month === this.state.month;
-        })
+                return year === this.state.year && month === this.state.month;
+            })
+        let totalFixtures = fixtures.length;
+
+        if (totalFixtures > 5) {
+            fixtures = fixtures.slice(this.state.page - 1, this.state.page + 4);
+        }
+        
+        
 
         return (
             <Layout>
@@ -75,12 +94,12 @@ class FixturesWrapper extends React.Component {
                         month={this.state.month}
                     />
                     <Fixtures 
-                        fixtures={this.state.filter 
-                            ? fixtures 
-                            : this.props.data.allStrapiFixture.edges
-                        }
+                        fixtures={fixtures}
                         year={this.state.year}
                         month={this.state.month}
+                        page={this.state.page}
+                        setPage={this.setPage}
+                        totalFixtures={totalFixtures}
                     />
                 </div>
             </Layout>
