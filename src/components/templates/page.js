@@ -1,12 +1,14 @@
 import React from 'react';
 import Layout from '../../components/layout' 
 
-import { StaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import ReactMarkdown from 'react-markdown';
 
-const PageTemplate = ({data}) => {
-    const {page_title, page_content }= data.strapiPage;
+const PageTemplate = (props) => {
+    console.log(props, 'this is props');
+    const {page_title, page_content }= props.data.strapiPage;
+
     return (
         <Layout>
             <div className="container">
@@ -32,17 +34,10 @@ const PageTemplate = ({data}) => {
         </Layout>
     )}
 
-export default () => (
-    <StaticQuery 
-        query={query}
-        render={data => (
-            <PageTemplate data={data} />
-        )}
-    />
-)
+export default PageTemplate;
 
-const query = graphql`
-    query ($id: String) {
+export const pageQuery = graphql`
+    query HomeQuery($id: String) {
         strapiPage(id: {eq: $id}) {
             page_title
             page_content

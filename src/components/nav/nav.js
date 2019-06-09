@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link, navigate } from "gatsby"
-
+import { Link, navigate, StaticQuery, graphql } from "gatsby"
 import { isLoggedIn, logout } from "../../services/auth";
 
 class Nav extends React.Component {
@@ -20,6 +19,9 @@ class Nav extends React.Component {
     }
 
     render () {
+        const sitePages = this.props.data.allSitePage.edges.filter(({node}) => {
+            return node.context.url;
+        });
         return (
             <nav className="navbar has-background-white-ter" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
@@ -82,6 +84,20 @@ class Nav extends React.Component {
                                 </Link>
                             </div>
                         </div>
+                        <div className="navbar-item has-dropdown is-hoverable">
+                            <a className="navbar-item">
+                                Pages
+                            </a>
+                            <div className="navbar-dropdown">
+                                {
+                                    sitePages.map(({node}) => (
+                                        <Link key={`link${node.context.url}`} className="navbar-item" to={`${node.context.url}`}>
+                                            {node.context.title}
+                                        </Link>
+                                    ))
+                                }
+                            </div>
+                        </div>
                         <Link className="navbar-item" to="/contact">
                             Contact
                         </Link>
@@ -110,4 +126,29 @@ class Nav extends React.Component {
    
  }
 
- export default Nav;
+ const query = graphql`
+        query {
+            allSitePage {
+                edges {
+                    node {
+                        context {
+                            url
+                            title
+                        }
+                    }
+                }
+            }
+        }
+`
+
+ export default () => (
+    <StaticQuery 
+        query={query}
+        render={data => (
+            <Nav data={data} />
+        )}
+    />
+)
+
+
+    

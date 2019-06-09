@@ -18,7 +18,7 @@ const Hero = () => (
                 </div>
               </div>
               <div className="level-right">
-                <figure class="image is-128x128">
+                <figure className="image is-128x128">
                   <img alt="Burgess Hill Cred" src="https://res.cloudinary.com/dneca1h4f/image/upload/v1556803504/kt260roj6vwwzz9rfwwc.png" />
                 </figure>
               </div>

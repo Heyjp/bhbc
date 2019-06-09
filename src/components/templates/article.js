@@ -42,19 +42,13 @@ const ArticleTemplate = ({data}) => {
                 </section>
             </div>
         </Layout>
-    )}
-
-export default () => (
-    <StaticQuery 
-        query={query}
-        render={data => (
-            <ArticleTemplate data={data} />
-        )}
-    />
     )
+}
+
+export default ArticleTemplate;
     
-const query = graphql`
-    query ($id: String) {
+export const query = graphql`
+    query ArticleQuery ($id: String) {
         strapiArticle(id: {eq: $id}) {
             title
             content
@@ -62,4 +56,3 @@ const query = graphql`
         }
     }
 `
-    
