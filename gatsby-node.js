@@ -27,6 +27,7 @@ exports.createPages = async function ({ actions, graphql }) {
             }
 
     `);
+    console.log(query.data, 'this is data');
 
     const { articles, pages } = query.data;
     

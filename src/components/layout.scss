@@ -217,7 +217,8 @@ section {
 
 .gallery-header {
     margin-top: 1rem;
-    padding: 2rem;
+    padding: 1rem;
+    padding-bottom: 0;
 }
 
 .box-full {
@@ -231,3 +232,17 @@ section {
 
 }
 
+
+.competition-main {
+    width: 100%;
+    padding-top: 2rem;
+    margin-left: 2rem;
+}
+
+/* Footer */
+
+.footer-divider {
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -5,9 +5,9 @@ import TournamentHero from './tournamentHero';
 
 const MatchHeader = (props) => {
     return (
-    <div className={`${tournamentStyles.matchHeader}`}>
-        <p className="has-text-weight-semibold has-text-info">G{props.matchNum}</p>
-    </div>
+        <div className={`${tournamentStyles.matchHeader}`}>
+            <p className="has-text-weight-semibold has-text-info">G{props.matchNum}</p>
+        </div>
     )
 }
 
@@ -72,7 +72,7 @@ const Round = (props) =>  {
 const TournamentContainer = (props) => (
     <div style={{'width': '100%'}}>
         <TournamentHero />
-        <hr />
+        <hr style={{'width': '80%', 'marginLeft': 'auto', 'marginRight': 'auto'}} />
         <div className="columns is-centered">
             <div className="column is-four-fifths is-full-mobile">
                 <div className={tournamentStyles.container}>
