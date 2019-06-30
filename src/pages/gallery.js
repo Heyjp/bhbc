@@ -5,14 +5,14 @@ import { graphql } from 'gatsby';
 const Gallery = (props) => {
     return (
         <Layout>
-                <div className="container main-content wrap">
-                    <div className="columns is-centered">
-                        <div className="column is-full">
-                            <GalleryHeader/>
-                            <GalleryBody images={props.data.allStrapiPhoto.edges} />    
-                        </div>
+            <div className="container main-content gallery-wrap">
+                <div className="columns is-centered">
+                    <div className="column is-full">
+                        <GalleryHeader/>
+                        <GalleryBody images={props.data.allStrapiPhoto.edges} />    
                     </div>
                 </div>
+            </div>
         </Layout>
     )
 };
@@ -21,7 +21,7 @@ const GalleryHeader = () => (
     <div className="columns is-centered">
         <div className="column is-four-fifths">
             <div className="gallery-header">
-                <h1 className="subtitle is-3 has-text-weight-light">Gallery</h1>
+                <h1 className="subtitle is-3 has-text-weight-light">Club Photos</h1>
                 <hr  />
             </div>
         </div>
@@ -30,7 +30,7 @@ const GalleryHeader = () => (
 
 
 const GalleryBody = ({images}) => (
-    <div className="columns is-multiline is-centered is-full">
+    <div className="columns is-multiline is-centered is-four-fifths">
         {
              images.map(({node}) => {
                 return (
@@ -45,7 +45,7 @@ const ImageCard = ({url, description}) => (
     <div className="column is-one-quarter">
         <div class="card">
             <div class="card-image">
-                <figure class="image is-3by2">
+                <figure class="image is-4by3">
                     <a href={`${url}`}><img src={`${url}`} /></a>
                 </figure>
             </div>

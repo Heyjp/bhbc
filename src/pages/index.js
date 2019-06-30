@@ -150,8 +150,7 @@ const IndexPage = ({data}) => {
         <Hero></Hero>
         <hr className="is-marginless" />
         <Main></Main>
-        {/* <Content></Content> */}
-
+        <Content></Content>
         {/* <Articles articles={data.allStrapiArticle} /> */}
         <Membership></Membership>
         <Sponsors></Sponsors>
