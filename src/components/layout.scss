@@ -17,11 +17,10 @@ section {
         padding: 0 2rem;
         &.main-container, &.membership-container {
             min-height: 40vh;
-            padding-top: 3rem;
-            padding-bottom: 6rem;
+            padding-top: 1rem;
+            padding-bottom: 3rem;
             display: flex;
             align-items: center;
-            margin-bottom: 0px !important;
         }
 }
 
@@ -237,6 +236,11 @@ section {
     align-items: center;
     height: 100%;
 }
+
+.logo {
+    margin-left: 1rem;
+}
+
 @media screen and (max-width: 1000px) {
 
     .navbar-item:hover {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, navigate, StaticQuery, graphql } from "gatsby"
 import { isLoggedIn, logout } from "../../services/auth";
+import logo from '../../images/bhbc-no-bg.png';
 
 class Nav extends React.Component {
     
@@ -26,7 +27,8 @@ class Nav extends React.Component {
             <nav className="navbar has-background-white-ter" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
                     <Link className="navbar-item" to="/">
-                        <p className="title">BH<span className="has-text-primary">BC</span></p>
+                        <img src={logo} class="logo" />
+                        {/* <p className="title">BH<span className="has-text-primary">BC</span></p> */}
                     </Link>
                     <a  
                         className={`navbar-burger ${this.state.activeNav ? 'is-active' : ''}`}
