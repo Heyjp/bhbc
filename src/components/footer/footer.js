@@ -4,16 +4,12 @@ import { Link } from 'gatsby';
 export default () => (
     <footer className="footer has-background-grey-dark">
         <div className="content has-text-centered">
-            <div className="level">
-                <div className="level-item">
-                    <p className=" has-text-white-ter">Burgess Hill Bowling Club,
-                            Westhill Drive,
-                            Burgess Hill,
-                            RH15 9PP,
-                            01444 870533
-                        </p>
-                </div>
-            </div>
+            <p className=" has-text-white-ter">Burgess Hill Bowling Club,
+                    Westhill Drive,
+                    Burgess Hill,
+                    RH15 9PP,
+                    01444 870533
+            </p>
             <hr className="footer-divider has-background-white " />
             <div className="level">
                 <div className="level-item">

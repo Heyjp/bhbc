@@ -23,7 +23,7 @@ const Files = (props) =>  {
                         <td>{node.name}</td>
                         <td>{new Date(node.date).toDateString()}</td>
                         <td>
-                            <a className="button is-link" href={node.file.publicURL} download>Click here to download</a>
+                            <a className="button is-link" href={node.file.url} download>Click here to download</a>
                         </td>
                       </tr>
                     ))}
@@ -47,7 +47,7 @@ export default () => (
               title
               date
               file {
-                publicURL
+                url
               }
             }
           }

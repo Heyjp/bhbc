@@ -34,7 +34,7 @@ const GalleryBody = ({images}) => (
         {
              images.map(({node}) => {
                 return (
-                    <ImageCard description={node.description} url={node.file.publicURL} />
+                    <ImageCard description={node.description} url={node.file.url} />
                 )
             })
         }
@@ -68,8 +68,7 @@ export const query = graphql`
                 node {
                     id
                     file {
-                        publicURL
-                        relativePath
+                        url
                     }
                     description
                 }

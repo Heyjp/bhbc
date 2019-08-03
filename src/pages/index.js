@@ -1,9 +1,12 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
+import logo from '../images/no-bg-crest.png';
+import bowlsImage from '../images/bowls.jpg'
+import bowlsGroup from '../images/bhbc-group.jpg';
 
 const Hero = () => (
-  <section className="hero is-medium is-primary is-bold">
+  <section className="hero is-primary is-bold">
     <div className="container">
         <div className="hero-body">
             <div className="level">
@@ -19,7 +22,7 @@ const Hero = () => (
               </div>
               <div className="level-right">
                 <figure className="image is-128x128">
-                  <img alt="Burgess Hill Cred" src="https://res.cloudinary.com/dneca1h4f/image/upload/v1556803504/kt260roj6vwwzz9rfwwc.png" />
+                  <img alt="Burgess Hill Cred" src={logo} style={{'width': '100px'}}/>
                 </figure>
               </div>
             </div>
@@ -31,21 +34,27 @@ const Hero = () => (
 const Main = () => (
   <section className="content main-container has-background-white">
     <div className="container">
-        <h4 className="subtitle is-3 has-text-centered has-text-weight-light">About Our Club</h4>
         <div className="columns is-centered">
-          
-          <div className="column is-full">
+          <div className="column">
+            <div class="horizontal-center">
+                <figure class="image">
+                  <img src={bowlsImage} />
+                </figure>
+            </div>
+          </div>
+          <div className="column is-three-fifths">
+            <h4 className="subtitle is-3 has-text-centered has-text-weight-light">About Our Club</h4>
             <p>Burgess Hill Bowls Club, is the only Lawn Bowls Club in our town and is tucked away in West Hill Drive, just off Royal George Road. The club has over one hundred and fifty playing and social members and has six rinks and a modern licensed clubhouse, used on match days and for social events</p>
             <p>Our playing season begins in late April and runs through the summer months to the middle of September. The majority of our fixtures throughout the season are friendly matches with other clubs in the area, and are played on weekday and weekend afternoons.These games are a relaxed and easy way to learn, improve and play bowls. </p>
 
-            <p>For those players wishing to play in a more competitive arena the club enters teams in two leagues as well as players in both National and County competitions. On Monday afternoons and Friday nights there are ‘Turn up and Bowl’ drives, 
+            {/* <p>For those players wishing to play in a more competitive arena the club enters teams in two leagues as well as players in both National and County competitions. On Monday afternoons and Friday nights there are ‘Turn up and Bowl’ drives, 
               and during the season a number of Fun drives are held such as the Candlelight match, Club Triples day, End of Season drive and others. 
               Most of these events raise money for our chosen charity. 
-            </p>
+            </p> */}
             {/* Throughout the winter months the Bar is open most Friday evenings and some other nights. The club now has two darts teams playing in the local leagues every Wednesday throughout the winter months and the darts board is available for casual play at times when the club is open. */}
-            <p>
+            {/* <p>
               Please note that we welcome touring sides who are visiting Sussex, please use the contact form if you are interested in playing us.
-            </p>    
+            </p>     */}
             </div>
         </div>
       </div>
@@ -100,7 +109,12 @@ const Membership = () => (
           </p>
         </div>
         <div className="column">
-            <h4 className="subtitle is-5 has-text-centered">Annual Subscriptions - 2018</h4>
+          <div class="horizontal-center">
+              <figure class="image">
+                <img src={bowlsGroup} />
+              </figure>
+          </div>
+            {/* <h4 className="subtitle is-5 has-text-centered">Annual Subscriptions - 2018</h4>
             <p>
                 There are currently three types are Membership: Playing, Junior and Social. 
             </p>
@@ -116,7 +130,7 @@ const Membership = () => (
                 </li> 
             </ul>
             <p>The Membership year is from 1st April</p>
-            <p>Our Green is open to members of the public, but advance booking is required and the appropriate Green Fee payable. </p>
+            <p>Our Green is open to members of the public, but advance booking is required and the appropriate Green Fee payable. </p> */}
         </div>
       </div>
     </div>
