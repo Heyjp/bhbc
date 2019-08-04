@@ -21,7 +21,7 @@ class Nav extends React.Component {
     render () {
         const sitePages = this.props.data.allSitePage.edges.filter(({node}) => {
 
-            if (!node || node.context ) {
+            if (!node || !node.context) {
                 return false;
             }
             return node.context.url;
