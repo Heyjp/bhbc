@@ -11,20 +11,25 @@ export default () => (
                     01444 870533
             </p>
             <hr className="footer-divider has-background-white " />
-            <div className="level">
-                <div className="level-item">
-                    <Link to="/" className="has-text-weight-semibold has-text-white">Home</Link>
-                </div>
-                <div className="level-item">s
-                    <Link to="/history" className="has-text-weight-semibold has-text-white">About</Link>
-                </div>
-                <div className="level-item">
-                 <Link to="/fixtures" className="has-text-weight-semibold has-text-white">Fixtures</Link>
-                </div>
-                <div className="level-item">
-                  <Link to="/contact" className="has-text-weight-semibold has-text-white">Contact</Link>
+            <div className="columns is-centered">
+                <div className="column is-four-fifths">
+                    <div className="level">
+                        <div className="level-item">
+                            <Link to="/" className="has-text-weight-semibold has-text-white">Home</Link>
+                        </div>
+                        <div className="level-item">s
+                            <Link to="/history" className="has-text-weight-semibold has-text-white">About</Link>
+                        </div>
+                        <div className="level-item">
+                        <Link to="/fixtures" className="has-text-weight-semibold has-text-white">Fixtures</Link>
+                        </div>
+                        <div className="level-item">
+                        <Link to="/contact" className="has-text-weight-semibold has-text-white">Contact</Link>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
     </footer>
 )

@@ -30,19 +30,23 @@ const GalleryHeader = () => (
 
 
 const GalleryBody = ({images}) => (
-    <div className="columns is-multiline is-centered is-four-fifths">
-        {
-             images.map(({node}) => {
-                return (
-                    <ImageCard description={node.description} url={node.file.url} />
-                )
-            })
-        }
+    <div className="columns is-centered">
+        <div className="column is-four-fifths">
+            <div className="columns is-multiline is-centered">
+                {
+                    images.map(({node}) => {
+                        return (
+                            <ImageCard description={node.description} url={node.file.publicURL} />
+                        )
+                    })
+                }
+            </div>
+        </div>
     </div>
 )
 
 const ImageCard = ({url, description}) => (
-    <div className="column is-one-quarter">
+    <div className="column is-one-third">
         <div class="card">
             <div class="card-image">
                 <figure class="image is-4by3">
@@ -68,7 +72,7 @@ export const query = graphql`
                 node {
                     id
                     file {
-                        url
+                        publicURL
                     }
                     description
                 }
