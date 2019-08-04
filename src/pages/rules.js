@@ -83,13 +83,12 @@ class RulesContainer extends React.Component {
     render () {
         return (
             <Layout>
-                <section class="hero is-info">
+                <section class="hero">
                     <div class="hero-body">
                         <div class="container">
-                        <h1 class="title">
-                            Competition Rules
-                        </h1>
-
+                            <h1 class="title">
+                                Competition Rules
+                            </h1>
                         </div>
                     </div>
                 </section>

@@ -2,8 +2,8 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import logo from '../images/no-bg-crest.png';
-import bowlsImage from '../images/bowls.jpg'
-import bowlsGroup from '../images/bhbc-group.jpg';
+import bowlsImage from '../images/bowls-min.jpg'
+import bowlsGroup from '../images/bhbc-group-min.jpg';
 
 const Hero = () => (
   <section className="hero is-primary is-bold">
@@ -60,7 +60,6 @@ const Main = () => (
       </div>
     </section>
 )
-
 
 const Content = () => (
   <section className="content box-container has-background-white-bis">
