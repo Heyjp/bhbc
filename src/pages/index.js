@@ -3,31 +3,32 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 
 const Hero = () => (
-  <section className="hero is-primary is-bold">
+<section className="hero is-primary is-bold">
+  <div className="hero-body">
     <div className="container">
-        <div className="hero-body">
-            <div className="level">
-              <div className="level-left">
-                <div>
-                  <h1 className="title has-text-weight-light">
-                        Burgess Hill Bowls Club
-                  </h1>
-                  <h4 className="subtitle is-4">
-                    Welcome to our website
-                  </h4>
-                </div>
-              </div>
-              <div className="level-right is-hidden-mobile">
-                <div style={{'marginLeft': '2rem'}}>
-                  <figure className="image is-128x128">
-                    <img alt="Burgess Hill Cred" src="/static/0229f3e4cf9f914242d521139359b823-2c06b2e681c66f2e2db8b38193cb9b05.png" style={{'width': '100px'}}/>
-                  </figure>
-                </div>
-              </div>
-            </div>
+      <div className="level">
+        <div className="level-left">
+          <div>
+            <h1 className="title has-text-weight-light">
+              Burgess Hill Bowls Club
+            </h1>
+            <h4 className="subtitle is-4">
+              Welcome to our website
+            </h4>
+          </div>
         </div>
-      </div>
-  </section>
+        <div className="level-right is-hidden-mobile">
+          <div className="level-item">
+            <figure className="image is-128x128">
+                <img alt="Burgess Hill Cred" src="https://bhbc.herokuapp.com/uploads/3b52bf04715941a2ab951cad27df2a53.png" style={{'width': '75px'}}/>
+            </figure>
+          </div>
+
+        </div>
+      </div>  
+    </div>
+  </div>
+</section>
 )
 
 const Main = () => (
