@@ -18,7 +18,7 @@ const Files = (props) =>  {
                       </tr>
                   </thead>
                   <tbody>
-                    {props.allStrapiFile.edges.map(({node}) => (
+                    {props.allStrapiMinute.edges.map(({node}) => (
                       <tr key={node.id}>
                         <td>{node.name}</td>
                         <td>{new Date(node.date).toDateString()}</td>
