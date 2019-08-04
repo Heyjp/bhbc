@@ -20,7 +20,7 @@ const Hero = () => (
         <div className="level-right is-hidden-mobile">
           <div className="level-item">
             <figure className="image is-128x128">
-                <img alt="Burgess Hill Cred" src="https://bhbc.herokuapp.com/uploads/3b52bf04715941a2ab951cad27df2a53.png" style={{'width': '75px'}}/>
+                <img alt="Burgess Hill Cred" src="/static/0229f3e4cf9f914242d521139359b823-2c06b2e681c66f2e2db8b38193cb9b05.png" style={{'width': '75px'}}/>
             </figure>
           </div>
 

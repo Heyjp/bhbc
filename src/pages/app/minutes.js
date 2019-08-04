@@ -44,7 +44,7 @@ export default () => (
           edges {
             node {
               id
-              title
+              name
               date
               file {
                 url
