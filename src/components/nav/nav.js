@@ -22,6 +22,7 @@ class Nav extends React.Component {
         const sitePages = this.props.data.allSitePage.edges.filter(({node}) => {
             return node.context.url;
         });
+
         return (
             <nav className="navbar has-background-white-ter" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
