@@ -1,9 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-import logo from '../images/no-bg-crest.png';
-import bowlsImage from '../images/bowls-min.jpg'
-import bowlsGroup from '../images/bhbc-group-min.jpg';
 
 const Hero = () => (
   <section className="hero is-primary is-bold">
@@ -23,7 +20,7 @@ const Hero = () => (
               <div className="level-right is-hidden-mobile">
                 <div style={{'marginLeft': '2rem'}}>
                   <figure className="image is-128x128">
-                    <img alt="Burgess Hill Cred" src={logo} style={{'width': '100px'}}/>
+                    <img alt="Burgess Hill Cred" src="/static/0229f3e4cf9f914242d521139359b823-2c06b2e681c66f2e2db8b38193cb9b05.png" style={{'width': '100px'}}/>
                   </figure>
                 </div>
               </div>
@@ -40,7 +37,7 @@ const Main = () => (
           <div className="column">
             <div class="horizontal-center">
                 <figure class="image">
-                  <img src={bowlsImage} />
+                  <img src="/static/318868f61184b23c22af156884814f8d-7f77ec2e4051d41d21c31755b7321de7.JPG" />
                 </figure>
             </div>
           </div>
@@ -112,7 +109,7 @@ const Membership = () => (
         <div className="column">
           <div class="horizontal-center">
               <figure class="image">
-                <img src={bowlsGroup} />
+                <img src="/static/588e48f3c2eafa2840b3c642501c9a85-6fb7f89d2eee4a07959c4398a68be351.JPG" />
               </figure>
           </div>
             {/* <h4 className="subtitle is-5 has-text-centered">Annual Subscriptions - 2018</h4>
