@@ -5,8 +5,8 @@ export default () => (
     <Layout>
         <div className="container ">
             <section className="content commmittee-wrap">
-                    <div className="columns"> 
-                        <div className="column ">
+                    <div className="columns is-centered"> 
+                        <div className="column is-four-fifths">
                             <h1 className="title is-3 has-text-weight-light">Your Officers and GMC 2019</h1>
                             <hr />
                             <div className="columns">
@@ -14,7 +14,7 @@ export default () => (
                                     <CommitteeTable />
                                 </div>
                                 <div className="column">
-                                    <img alt="burgess hill bowls club commitee group" gatsrc="/static/Committee-edc591dd6fa7b0c638b0a1e5e896748b.JPG" />
+                                    <img alt="burgess hill bowls club commitee group" src="/static/7d789e2e757fafe5912d3ff222d7426c-48cbe2e54a3552ad3e9d9e0db4af89e8.JPG" />
                                 </div>
                             </div>
                         </div>   

@@ -20,10 +20,12 @@ const Hero = () => (
                   </h4>
                 </div>
               </div>
-              <div className="level-right">
-                <figure className="image is-128x128">
-                  <img alt="Burgess Hill Cred" src={logo} style={{'width': '100px'}}/>
-                </figure>
+              <div className="level-right is-hidden-mobile">
+                <div style={{'marginLeft': '2rem'}}>
+                  <figure className="image is-128x128">
+                    <img alt="Burgess Hill Cred" src={logo} style={{'width': '100px'}}/>
+                  </figure>
+                </div>
               </div>
             </div>
         </div>
@@ -43,7 +45,7 @@ const Main = () => (
             </div>
           </div>
           <div className="column is-three-fifths">
-            <h4 className="subtitle is-3 has-text-centered has-text-weight-light">About Our Club</h4>
+            {/* <h4 className="subtitle is-3 has-text-centered has-text-weight-light">About Our Club</h4> */}
             <p>Burgess Hill Bowls Club, is the only Lawn Bowls Club in our town and is tucked away in West Hill Drive, just off Royal George Road. The club has over one hundred and fifty playing and social members and has six rinks and a modern licensed clubhouse, used on match days and for social events</p>
             <p>Our playing season begins in late April and runs through the summer months to the middle of September. The majority of our fixtures throughout the season are friendly matches with other clubs in the area, and are played on weekday and weekend afternoons.These games are a relaxed and easy way to learn, improve and play bowls. </p>
 
