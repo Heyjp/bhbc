@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, navigate, graphql } from "gatsby"
+import { Link, navigate, graphql, StaticQuery } from "gatsby"
 import { isLoggedIn, logout } from "../../services/auth";
 
 import  logo  from '../../images/bhbc-no-bg.png';
@@ -21,13 +21,13 @@ class Nav extends React.Component {
     }
 
     render () {
-        // const sitePages = this.props.data.allSitePage.edges.filter(({node}) => {
+        const sitePages = this.props.data.allSitePage.edges.filter(({node}) => {
 
-        //     if (!node || !node.context) {
-        //         return false;
-        //     }
-        //     return node.context.url;
-        // });
+            if (!node || !node.context) {
+                return false;
+            }
+            return node.context.url;
+        });
 
         return (
             <nav className="navbar has-background-white-ter" role="navigation" aria-label="main navigation">
@@ -95,7 +95,7 @@ class Nav extends React.Component {
                             <a className="navbar-item">
                                 Pages
                             </a>
-                            {/* <div className="navbar-dropdown">
+                            <div className="navbar-dropdown">
                                 {
                                     sitePages.map(({node}) => (
                                         <Link key={`link${node.context.url}`} className="navbar-item" to={`${node.context.url}`}>
@@ -103,7 +103,7 @@ class Nav extends React.Component {
                                         </Link>
                                     ))
                                 }
-                            </div> */}
+                            </div>
                         </div>
                         <Link className="navbar-item" to="/contact">
                             Contact
@@ -133,31 +133,31 @@ class Nav extends React.Component {
    
  }
 
-//  const query = graphql`
-//         query {
-//             allSitePage {
-//                 edges {
-//                     node {
-//                         context {
-//                             url
-//                             title
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-// `
+ const query = graphql`
+        query {
+            allSitePage {
+                edges {
+                    node {
+                        context {
+                          url
+                          title
+                        }
+                    }
+                }
+            }
+        }
+`
 
 
-//  export default () => (
-//     <StaticQuery 
-//         query={query}
-//         render={data => (
-//             <Nav data={data} />
-//         )}
-//     />
-// )
+ export default () => (
+    <StaticQuery 
+        query={query}
+        render={data => (
+            <Nav data={data} />
+        )}
+    />
+)
 
-export default Nav;
+// export default Nav;
 
     
