@@ -43,7 +43,6 @@ exports.createPages = async function ({ actions, graphql }) {
     })
 
     await pages.edges.forEach(({node}) => {
-        console.log(node, 'this is node');
         const {id, title} = node;
         const url = string_to_slug(title);
         

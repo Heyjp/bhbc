@@ -29,7 +29,6 @@ class TournamentContainer extends React.Component {
   }
 
   render() {
-    console.log(this.props.data, 'this is data');
     const { tournament } = this.props.data;
 
     const tournaments = tournament.edges.map(({node}) => node);
