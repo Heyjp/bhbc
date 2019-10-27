@@ -52,7 +52,7 @@ export const query = graphql`
         strapiArticle(id: {eq: $id}) {
             title
             content
-            updatedAt
+            updated_at
         }
     }
 `

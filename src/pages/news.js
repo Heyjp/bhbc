@@ -57,7 +57,7 @@ export const pageQuery = graphql`
           id
           title
           content
-          updatedAt
+          updated_at
         }
       }
     }

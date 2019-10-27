@@ -119,7 +119,7 @@ export const fixturesQuery = graphql`
           dress
           match_type
           venue
-          teams
+          Teams
         }
       }
     }

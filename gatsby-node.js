@@ -1,60 +1,60 @@
 const path = require('path');
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-exports.createPages = async function ({ actions, graphql }) {
-    const { createPage } = actions;
-    const query = await graphql(`
-            {
-                pages: allStrapiPage {
-                    edges {
-                        node {
-                            id
-                            page_title
-                            page_content
-                        }
-                    }
-                }
-                articles: allStrapiArticle {
-                    edges { 
-                        node {
-                            id
-                            title
-                            content
-                            createdAt
-                        }
-                    }
-                }
-            }
+// exports.createPages = async function ({ actions, graphql }) {
+//     const { createPage } = actions;
+//     const query = await graphql(`
+//             {
+//                 pages: allStrapiPage {
+//                     edges {
+//                         node {
+//                             id
+//                             page_title
+//                             page_content
+//                         }
+//                     }
+//                 }
+//                 articles: allStrapiArticle {
+//                     edges { 
+//                         node {
+//                             id
+//                             title
+//                             content
+//                             createdAt
+//                         }
+//                     }
+//                 }
+//             }
 
-    `);
+//     `);
 
-    const { articles, pages } = query.data;
+//     const { articles, pages } = query.data;
     
-    await articles.edges.forEach(({node}) => {
-        createPage({
-            path: `/news/${node.id}`,
-            component: path.resolve(`./src/components/templates/article.js`),
-            context: {
-                id: node.id
-            }
-        })
-    })
+//     await articles.edges.forEach(({node}) => {
+//         createPage({
+//             path: `/news/${node.id}`,
+//             component: path.resolve(`./src/components/templates/article.js`),
+//             context: {
+//                 id: node.id
+//             }
+//         })
+//     })
 
-    await pages.edges.forEach(({node}) => {
-        const {id, page_title} = node;
-        const url = string_to_slug(page_title);
+//     await pages.edges.forEach(({node}) => {
+//         const {id, page_title} = node;
+//         const url = string_to_slug(page_title);
         
-        createPage({
-            path: `/site/${url}`,
-            component: path.resolve(`./src/components/templates/page.js`),
-            context: {
-                id: id,
-                url: `/site/${url}`,
-                title: node.page_title
-            }
-        })
-    })
-}
+//         createPage({
+//             path: `/site/${url}`,
+//             component: path.resolve(`./src/components/templates/page.js`),
+//             context: {
+//                 id: id,
+//                 url: `/site/${url}`,
+//                 title: node.page_title
+//             }
+//         })
+//     })
+// }
 
 // Called after every page is created
 exports.onCreatePage = async ({ page, actions }) => {

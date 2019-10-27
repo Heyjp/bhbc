@@ -6,7 +6,6 @@ import { graphql } from "gatsby"
 import ReactMarkdown from 'react-markdown';
 
 const PageTemplate = (props) => {
-    console.log(props, 'this is props');
     const {page_title, page_content }= props.data.strapiPage;
 
     return (
@@ -36,12 +35,12 @@ const PageTemplate = (props) => {
 
 export default PageTemplate;
 
-export const pageQuery = graphql`
-    query HomeQuery($id: String) {
-        strapiPage(id: {eq: $id}) {
-            page_title
-            page_content
-        }
-    }
-`
+// export const pageQuery = graphql`
+//     query HomeQuery($id: String) {
+//         strapiPage(id: {eq: $id}) {
+//             page_title
+//             page_content
+//         }
+//     }
+// `
     

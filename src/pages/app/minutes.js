@@ -43,12 +43,9 @@ export default () => (
         allStrapiMinute {
           edges {
             node {
-              id
-              name
-              date
-              file {
-                url
-              }
+                id
+                title
+                date
             }
           }
         }

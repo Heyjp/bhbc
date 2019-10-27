@@ -1,6 +1,7 @@
 import React from 'react';
 
 const CompsMenu = (props) => {
+    const { tournament, tournaments, setTournament } = props;
     return (
       <div className="menu-wrap has-background-white-bis">
         <aside className="menu ">
@@ -8,22 +9,21 @@ const CompsMenu = (props) => {
                 Club Competitions
             </p>
             <ul className="menu-list">
-                {props.comps.map((comp, index) => {          
+                {tournaments.map((comp, index) => {     
+                    const { title } = comp;     
                     return (
                       <li key={`comp-${index}`}>
-                        <a 
-                          className={comp.Name === props.comp 
+                        <button
+                            href="#"
+                          className={title === tournament
                             ? "is-active" 
                             : ""}
-                          onClick={()=> { props.setComp(comp.Name)}}
+                          onClick={()=> { 
+                              setTournament(title)
+                          }
+                        }
                         
-                        >{comp.Name}</a>
-                        {comp.Name === props.comp
-                           && <TournyList
-                            tourny={props.tourny}
-                            tournys={comp.tournaments}
-                            setTourny={props.setTourny}
-                            />}
+                        >{title}</button>
                       </li>
                     )  
                     }
@@ -32,28 +32,6 @@ const CompsMenu = (props) => {
         </aside>
       </div>
     )
-}
-
-const TournyList = (props) => {
-
-  return (
-      <ul>
-          {props.tournys && props.tournys.map((tourny) => {
-            return (
-              <li key={tourny.title}>
-                <a 
-                  className={tourny.title === props.tourny 
-                    ? "is-active" 
-                    : ""}
-                  onClick={() => props.setTourny(tourny.title)}>
-                  {tourny.title}
-                </a>
-              </li>
-            )
-          })
-        }
-      </ul>
-  )
 }
 
 export default CompsMenu;
