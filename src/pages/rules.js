@@ -1,8 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout.js';
 
-
-
 const RuleBox = () => (
     <div className="column rule-wrap">
         <div className="box has-background-light">
@@ -83,10 +81,10 @@ class RulesContainer extends React.Component {
     render () {
         return (
             <Layout>
-                <section class="hero">
-                    <div class="hero-body">
-                        <div class="container">
-                            <h1 class="title">
+                <section className="hero">
+                    <div className="hero-body">
+                        <div className="container">
+                            <h1 className="title">
                                 Competition Rules
                             </h1>
                         </div>
@@ -217,7 +215,7 @@ const EdwardRowland = () =>  (
             </li>
             <li>
                  Score cards to be signed by both skips.                   
-                Winner to telephone results to the Competition Secretary on the day of play and post the cards first class.  First Game winning skips    MUST forward their name and telephone number when sending the result card.
+                Winner to telephone results to the Competition Secretary on the day of play and post the cards first className.  First Game winning skips    MUST forward their name and telephone number when sending the result card.
             </li>
             <li>
                 No rule to be altered without the consent of the Burgess Hill Bowls Club Competition Committee.
@@ -273,7 +271,7 @@ const GladysRowland = () => (
             Semi-Finals to be played at Burgess Hill on Saturday, 17th August, at 10.00 a.m.  If due to weather or green conditions will be re-arranged for Sunday, 18th August, at 10.00 a.m.   The Final will be played at Burgess Hill on their Finals Day, Sunday, 1st September, 2019.
             </li>
             <li>
-                Score cards to be signed by both skips. Winner to telephone results to the Competition Secretary on the day of play and post the cards first class.  First Game winning skips MUST forward their name and telephone number when sending the result card. 
+                Score cards to be signed by both skips. Winner to telephone results to the Competition Secretary on the day of play and post the cards first className.  First Game winning skips MUST forward their name and telephone number when sending the result card. 
             </li>
             <li>
                 No rule to be altered without the consent of the Burgess Hill Bowls Club Competition Committee. 

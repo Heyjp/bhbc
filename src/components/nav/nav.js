@@ -2,6 +2,8 @@ import React from 'react';
 import { Link, navigate, graphql } from "gatsby"
 import { isLoggedIn, logout } from "../../services/auth";
 
+import  logo  from '../../images/bhbc-no-bg.png';
+
 class Nav extends React.Component {
     
     constructor(props) {
@@ -31,8 +33,7 @@ class Nav extends React.Component {
             <nav className="navbar has-background-white-ter" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
                     <Link className="navbar-item" to="/">
-                        <img src='/static/0229f3e4cf9f914242d521139359b823-2c06b2e681c66f2e2db8b38193cb9b05.png' class="logo" />
-                        {/* <p className="title">BH<span className="has-text-primary">BC</span></p> */}
+                        <img src={logo} className="logo" />
                     </Link>
                     <a  
                         className={`navbar-burger ${this.state.activeNav ? 'is-active' : ''}`}

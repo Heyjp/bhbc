@@ -47,14 +47,14 @@ const GalleryBody = ({images}) => (
 
 const ImageCard = ({url, description}) => (
     <div className="column is-one-third">
-        <div class="card">
-            <div class="card-image">
-                <figure class="image is-4by3">
+        <div className="card">
+            <div className="card-image">
+                <figure className="image is-4by3">
                     <a href={`${url}`}><img src={`${url}`} /></a>
                 </figure>
             </div>
-            <div class="card-content">
-                <div class="content">
+            <div className="card-content">
+                <div className="content">
                     {description}
                 </div>
             </div>

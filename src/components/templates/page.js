@@ -19,7 +19,7 @@ const PageTemplate = (props) => {
                                     <ul className="is-marginless">
                                         <li><a href="/" style={{'marginTop': '0.25em'}}>Home</a></li>
                                         <li><a href="#">Page</a></li>
-                                        <li class="is-active"><a href="#" aria-current="page">{page_title}</a></li>
+                                        <li className="is-active"><a href="#" aria-current="page">{page_title}</a></li>
                                     </ul>
                                 </nav>
                             </div>
