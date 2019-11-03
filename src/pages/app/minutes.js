@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from 'gatsby';
 
-const Files = (props) =>  {
+const Minutes = (props) =>  {
       return (
         <div className="container">
           <section className="content" >
@@ -18,15 +18,17 @@ const Files = (props) =>  {
                       </tr>
                   </thead>
                   <tbody>
-                    {props.allStrapiMinute.edges.map(({node}) => (
+                    {props.data.allStrapiMinute.edges.map(({node}) => {
+                        return (
                       <tr key={node.id}>
                         <td>{node.name}</td>
                         <td>{new Date(node.date).toDateString()}</td>
                         <td>
-                            <a className="button is-link" href={node.file.url} download>Click here to download</a>
+                            <a className="button is-link" href={node.file.publicURL} download>Click here to download</a>
                         </td>
                       </tr>
-                    ))}
+                    )
+                        })}
                   </tbody>
                 </table>
               </div>
@@ -36,7 +38,9 @@ const Files = (props) =>  {
       )
 }
 
-export default () => (
+export default Minutes;
+
+export const query = () => (
   <StaticQuery
     query={graphql`
       query MinutesQuery {
@@ -46,10 +50,13 @@ export default () => (
                 id
                 title
                 date
+                file {
+                    publicURL
+                }
             }
           }
         }
       }
-  `} render={Files} />
+  `} render={Minutes} />
 );
 

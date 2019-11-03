@@ -4,7 +4,7 @@ import { handleLogin, isLoggedIn } from "../../services/auth"
 
 class Login extends React.Component {
   state = {
-    password: ``,
+    password: `1940`,
   }
 
   handleUpdate = event => {
@@ -24,7 +24,6 @@ class Login extends React.Component {
     }
 
     return (
-     
       <div className="container">
           <div className="columns form-wrap is-centered is-vcentered">
             <div className="column is-two-fifths">

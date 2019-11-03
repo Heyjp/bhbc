@@ -8,7 +8,7 @@ export const getUser = () =>
 const setUser = user =>
     window.sessionStorage.setItem("gatsbyUser", JSON.stringify(user))
 
-export const handleLogin = ({ password}) => {
+export const handleLogin = ({ password }) => {
     if (password === `1940`) {
         return setUser({
             username: `member`
@@ -19,7 +19,9 @@ export const handleLogin = ({ password}) => {
 
 export const isLoggedIn = () => {
     const user = getUser()
-
+    if (!user.username) {
+        return false;
+    }
     return !!user.username
 }
 

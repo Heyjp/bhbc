@@ -5,13 +5,14 @@ import Minutes from "./minutes"
 import Login from "./login"
 import PrivateRoute from "../../components/privateRoute";
 
-const App = () => (
+const App = () => {
+    return (
     <Layout>
         <Router>
             <PrivateRoute path="/app/minutes" component={Minutes} />
             <Login path="/app/login" />
         </Router>
     </Layout>
-)
+)}
 
 export default App;

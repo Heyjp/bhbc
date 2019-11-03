@@ -108,9 +108,9 @@ class Nav extends React.Component {
                         <Link className="navbar-item" to="/contact">
                             Contact
                         </Link>
-                        {isLoggedIn() &&  <Link className="navbar-item" to="/app/minutes">
+                        {/* {isLoggedIn() &&  <Link className="navbar-item" to="/app/minutes">
                             Minutes
-                        </Link>}
+                        </Link>} */}
                         {!isLoggedIn() &&  <Link className="navbar-item" to="/app/login">
                             Login
                         </Link>}
