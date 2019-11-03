@@ -9,8 +9,8 @@ exports.createPages = async function ({ actions, graphql }) {
                     edges {
                         node {
                             id
-                            page_title
-                            page_content
+                            title
+                            content
                         }
                     }
                 }
@@ -20,7 +20,7 @@ exports.createPages = async function ({ actions, graphql }) {
                             id
                             title
                             content
-                            createdAt
+                            created_at
                         }
                     }
                 }
@@ -28,8 +28,10 @@ exports.createPages = async function ({ actions, graphql }) {
 
     `);
 
+   
+
     const { articles, pages } = query.data;
-    
+
     await articles.edges.forEach(({node}) => {
         createPage({
             path: `/news/${node.id}`,
@@ -41,8 +43,8 @@ exports.createPages = async function ({ actions, graphql }) {
     })
 
     await pages.edges.forEach(({node}) => {
-        const {id, page_title} = node;
-        const url = string_to_slug(page_title);
+        const {id, title} = node;
+        const url = string_to_slug(title);
         
         createPage({
             path: `/site/${url}`,
@@ -50,7 +52,7 @@ exports.createPages = async function ({ actions, graphql }) {
             context: {
                 id: id,
                 url: `/site/${url}`,
-                title: node.page_title
+                title: node.title
             }
         })
     })
