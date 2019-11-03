@@ -113,7 +113,7 @@ const Pagination = ({length, setPage, page}) => {
                     pages.map((item) => {
                         return (
                             <li key={`page-link${item}`}>
-                                <a class={`pagination-link 
+                                <a className={`pagination-link 
                                     ${item === page 
                                      ? 'is-current' : ""}`} 
                                      aria-label={`Page ${item}`} 

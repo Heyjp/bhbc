@@ -17,8 +17,8 @@ const Match = (props) => {
         <div className={`${tournamentStyles.matchContainer}`}>
             <MatchHeader matchNum={props.matchNum} />
             <ul className={tournamentStyles.playerList}>
-                <li className={`has-background-white-ter has-text-weight-semibold ${tournamentStyles.player}`}>{props.challenger || ''}</li>
-                <li className={`has-background-grey-lighter has-text-weight-semibold ${tournamentStyles.player}`}>{props.opponent || ''}</li>
+                <li className={`has-background-white-ter has-text-weight-semibold ${tournamentStyles.player}`}>{props.challenger}</li>
+                <li className={`has-background-grey-lighter has-text-weight-semibold ${tournamentStyles.player}`}>{props.opponent}</li>
             </ul>
         </div>
     )
@@ -49,13 +49,14 @@ const RoundTitle = (props) => {
 
 const Round = (props) =>  {
     const { totalTeams, round, matches, prelim = false } = props;
+
     const filteredMatches = matches.filter((match) => {
 
         if (prelim) {
-            return match.round === "prelim";
+            return match.round === 0;
         }
 
-        return match.round === round.toString();
+        return match.round === round;
     });
     const matchArray = populateRound(totalTeams, filteredMatches, prelim);
 
@@ -77,7 +78,7 @@ const TournamentContainer = (props) => (
             <div className="column is-four-fifths is-full-mobile">
                 <div className={tournamentStyles.container}>
                     {
-                        props.tournys && createRounds(props.tournys)
+                        props.tournament && createRounds(props.tournament)
                     }
                 </div>
             </div>
@@ -89,7 +90,6 @@ const TournamentContainer = (props) => (
 export default TournamentContainer;
 
 function createPrelims (totalMatches, matches, prelimMatchLength) {
-
     let prelimArray = new Array(totalMatches).fill(null)
 
     if (!matches) {
@@ -97,31 +97,29 @@ function createPrelims (totalMatches, matches, prelimMatchLength) {
     }
 
     // Create an array of matches and byes
-    
-       return prelimArray.map((e, index) => {
-            // see if there is a match num
-            let match = matches.find((match) => match.match_number === index+1);
-            // if there is a "match" enter details else return an empty match
-            if (match) {
-                let {challenger = "TBC", round, match_number = index+1, opponent="TBC" } = match;
-                return (<Match challenger={challenger} 
-                        opponent={opponent} 
-                        key={`prelim${index}`} 
-                        round={round}
-                        matchNum={match_number}
-                    />)
-            } else if (index < prelimMatchLength) {
-                return (<Match  key={`prelim${index} `} matchNum={index+1}/>)
-            }
+    return prelimArray.map((e, index) => {
+        // see if there is a match num
+        let match = matches.find((match) => match.match_number === index+1);
+        // if there is a "match" enter details else return an empty match
+        if (match) {
+            let {challenger = "TBC", round, match_number = index+1, opponent="TBC" } = match;
+            return (<Match challenger={challenger} 
+                    opponent={opponent} 
+                    key={`prelim${index}`} 
+                    round={round}
+                    matchNum={match_number}
+                />)
+        } else if (index < prelimMatchLength) {
+            return (<Match  key={`prelim${index} `} matchNum={index+1}/>)
+        }
 
-           
+        
 
-            return <Bye key={`prelim${index}`} />
-        });
+        return <Bye key={`prelim${index}`} />
+    });
 }
 
 function populateRound (totalTeams, matches, prelim) {
-
     if (prelim) {
         return createPrelims(totalTeams, matches, prelim);
     }
@@ -149,7 +147,7 @@ function populateRound (totalTeams, matches, prelim) {
 }
 
 const createRounds = (tournament) => {
-    const { matches, total_teams } = tournament;
+    const { Matches: matches, total_teams, title } = tournament;
     let isPrelim = false;
 
     // Work out whether there is a perfect bracket size or not

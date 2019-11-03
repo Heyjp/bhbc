@@ -19,7 +19,7 @@ const ArticleTemplate = ({data}) => {
                                 <ul className="is-marginless">
                                     <li><a href="#" style={{'marginTop': '0.25em'}}>Home</a></li>
                                     <li><a href="#">News</a></li>
-                                    <li class="is-active"><a href="#" aria-current="page">Article</a></li>
+                                    <li className="is-active"><a href="#" aria-current="page">Article</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -52,7 +52,7 @@ export const query = graphql`
         strapiArticle(id: {eq: $id}) {
             title
             content
-            updatedAt
+            updated_at
         }
     }
 `

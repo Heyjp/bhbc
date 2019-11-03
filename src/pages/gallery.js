@@ -36,7 +36,7 @@ const GalleryBody = ({images}) => (
                 {
                     images.map(({node}) => {
                         return (
-                            <ImageCard description={node.description} url={node.file.url} />
+                            <ImageCard description={node.description} url={node.photo.childImageSharp.original.src} />
                         )
                     })
                 }
@@ -47,14 +47,14 @@ const GalleryBody = ({images}) => (
 
 const ImageCard = ({url, description}) => (
     <div className="column is-one-third">
-        <div class="card">
-            <div class="card-image">
-                <figure class="image is-4by3">
+        <div className="card">
+            <div className="card-image">
+                <figure className="image is-4by3">
                     <a href={`${url}`}><img src={`${url}`} /></a>
                 </figure>
             </div>
-            <div class="card-content">
-                <div class="content">
+            <div className="card-content">
+                <div className="content">
                     {description}
                 </div>
             </div>
@@ -70,11 +70,16 @@ export const query = graphql`
         allStrapiPhoto {
             edges {
                 node {
-                    id
-                    file {
-                        url
-                    }
                     description
+                    photo {
+                        childImageSharp {
+                            original {
+                                width
+                                height
+                                src
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -6,8 +6,7 @@ import { graphql } from "gatsby"
 import ReactMarkdown from 'react-markdown';
 
 const PageTemplate = (props) => {
-    console.log(props, 'this is props');
-    const {page_title, page_content }= props.data.strapiPage;
+    const {title, content }= props.data.strapiPage;
 
     return (
         <Layout>
@@ -20,13 +19,13 @@ const PageTemplate = (props) => {
                                     <ul className="is-marginless">
                                         <li><a href="/" style={{'marginTop': '0.25em'}}>Home</a></li>
                                         <li><a href="#">Page</a></li>
-                                        <li class="is-active"><a href="#" aria-current="page">{page_title}</a></li>
+                                        <li className="is-active"><a href="#" aria-current="page">{title}</a></li>
                                     </ul>
                                 </nav>
                             </div>
-                            <h2 className="subtitle is-3">{page_title}</h2>
+                            <h2 className="subtitle is-3">{title}</h2>
                             <hr className="article-break"/>
-                            <ReactMarkdown className="content" source={page_content} />
+                            <ReactMarkdown className="content" source={content} />
                         </div>
                     </div>
                 </section>
@@ -39,8 +38,8 @@ export default PageTemplate;
 export const pageQuery = graphql`
     query HomeQuery($id: String) {
         strapiPage(id: {eq: $id}) {
-            page_title
-            page_content
+            title
+            content
         }
     }
 `
