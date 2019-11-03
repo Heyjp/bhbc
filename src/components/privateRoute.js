@@ -8,7 +8,6 @@ const PrivateRoute = ({
     ...rest
 }) => {
     if (!!isLoggedIn() && location.pathname !== `/app/login`) {
-        console.log('not logged In here');
         // If we’re not logged in, redirect to the home page.
         navigate(`/`)
         return null

@@ -59,7 +59,6 @@ const FixtureDescription = ({home, away}) => (
 
 
 export default ({fixtures, year, month}) => {
-    const {edges: fixtureArray } = fixtures;
     return (
         <div className="container">
             <div className="columns is-centered"> 
@@ -68,9 +67,9 @@ export default ({fixtures, year, month}) => {
 
                     <div className="league-fixture-wrap">                        
                     {
-                            fixtureArray.map(({node}) => {
+                            fixtures.map((fixture) => {
                                 return (
-                                    <Fixture key={node.id} fixture={node} />
+                                    <Fixture key={fixture.home_team + fixture.away_team} fixture={fixture} />
                                 )
                             }) 
                         }

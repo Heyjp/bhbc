@@ -1,13 +1,12 @@
 import React from 'react';
 
 const LeagueTable = ({entries}) => {
-    const { edges: teams } = entries
     const ROUNDS = [1, 2, 3, 4];
     let pools = [];
     // Create an array of all rounds
     ROUNDS.forEach((round) => {
         // 
-        let pool = createPools(teams, round);       
+        let pool = createPools(entries, round);       
         return pools.push(pool);
     })
 
@@ -71,17 +70,17 @@ export default LeagueTable;
 const createPools = (teams, round) => {
     // take all the teams and return only those with pool
     const pool = teams
-    .filter(({node}) => {
-        return node.pool === round.toString();
+    .filter((team) => {
+        return team.pool === round;
     })
     .sort((a, b) => {
-        return b.node.points - a.node.points;
+        return b.points - a.points;
     })
-    .map(({node: team}, index) => {
+    .map((team, index) => {
             return ( 
-                <tr key={team.name}>
+                <tr key={team.team_name}>
                     <td className={`${index < 1 ? "has-text-weight-semibold" : ''}`}>
-                        {team.name}
+                        {team.team_name}
                     </td>
                     <td>
                         {team.played}
