@@ -14,7 +14,6 @@ function limitTextLength(text, maxlength = MAX_LENGTH) {
 }
 
 const NewsList = ({data}) => {
-
     return (
         <Layout>
             <div className="events-wrapper main-content wrap">
@@ -30,7 +29,7 @@ const NewsList = ({data}) => {
                                             return (
                                                 <li key={node.id} className="news-item">
                                                     <h2><Link to={`/news/${node.id}`}>{node.title}</Link></h2>
-                                                    <h5 className="subtitle is-5">{new Date(node.updatedAt).toDateString()}</h5>
+                                                    <h5 className="subtitle is-5">{new Date(node.updated_at).toDateString()}</h5>
                                                     <p>{limitTextLength(node.content)}</p>
                                                 </li>   
                                             )

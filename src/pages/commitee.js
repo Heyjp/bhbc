@@ -1,6 +1,8 @@
 import React from 'react';
 import Layout from '../components/layout.js';
 
+import committee from '../images/committee-min.jpg'
+
 export default () => (
     <Layout>
         <div className="container ">
@@ -14,7 +16,7 @@ export default () => (
                                     <CommitteeTable />
                                 </div>
                                 <div className="column">
-                                    <img alt="burgess hill bowls club commitee group" src="/static/7d789e2e757fafe5912d3ff222d7426c-48cbe2e54a3552ad3e9d9e0db4af89e8.JPG" />
+                                    <img alt="burgess hill bowls club commitee group" src={committee} />
                                 </div>
                             </div>
                         </div>   
