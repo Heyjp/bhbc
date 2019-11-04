@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from 'gatsby';
+import { brotliDecompress } from "zlib";
 
 const Minutes = (props) =>  {
       return (
@@ -24,7 +25,7 @@ const Minutes = (props) =>  {
                         <td>{node.name}</td>
                         <td>{new Date(node.date).toDateString()}</td>
                         <td>
-                            <a className="button is-link" href={node.file.publicURL} download>Click here to download</a>
+                            <a className="button is-link" href={ node.file.publicURL || node.file.relativePath } download>Click here to download</a>
                         </td>
                       </tr>
                     )
@@ -51,6 +52,7 @@ export const query = () => (
                     date
                     file {
                         publicURL
+                        relativePath
                     }
                 }
             }
