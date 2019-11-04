@@ -81,26 +81,41 @@ class RulesContainer extends React.Component {
     render () {
         return (
             <Layout>
-                <section className="hero">
-                    <div className="hero-body">
-                        <div className="container">
-                            <h1 className="title">
-                                Competition Rules
-                            </h1>
-                        </div>
+                <div className="columns is-centered">
+                    <div className="column is-four-fifths">
+                    < section className = "hero" >
+                        <
+                        div className = "hero-body" >
+                        <
+                        div className = "container" >
+                        <
+                        h1 className = "title" >
+                        Competition Rules <
+                        /h1> <
+                        /div> <
+                        /div> <
+                        /section> <
+                        div className = "" >
+                        <
+                        section className = "content" >
+                        <
+                        div className = "columns" >
+                        <
+                        CompRules
+                    ruleSet = {
+                        this.state.ruleSet
+                    }
+                    handleClick = {
+                        this.handleClick
+                    }
+                    /> <
+                    RuleBox / >
+                        <
+                        /div> <
+                        /section> <
+                        /div>              
                     </div>
-                </section>
-                <div className="">
-                    <section className="content">
-                        <div className="columns">
-                            <CompRules 
-                                ruleSet={this.state.ruleSet} 
-                                handleClick={this.handleClick}
-                                />
-                            <RuleBox />
-                        </div>
-                    </section>
-                </div>                                               
+                </div>                    
             </Layout>
         )
     }

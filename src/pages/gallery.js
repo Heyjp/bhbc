@@ -32,11 +32,11 @@ const GalleryHeader = () => (
 const GalleryBody = ({images}) => (
     <div className="columns is-centered">
         <div className="column is-four-fifths">
-            <div className="columns is-multiline is-centered">
+            <div className="columns is-multiline">
                 {
-                    images.map(({node}) => {
+                    images.map(({node}, index) => {
                         return (
-                            <ImageCard description={node.description} url={node.photo.childImageSharp.original.src} />
+                            <ImageCard key={`image-${index}`} description={node.description} url={node.photo.childImageSharp.original.src} />
                         )
                     })
                 }
