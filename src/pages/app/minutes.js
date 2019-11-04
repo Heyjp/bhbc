@@ -45,16 +45,15 @@ export const query = () => (
     query={graphql`
       query MinutesQuery {
         allStrapiMinute {
-          edges {
-            node {
-                id
-                title
-                date
-                file {
-                    publicURL
+            edges {
+                node {
+                    title
+                    date
+                    file {
+                        publicURL
+                    }
                 }
             }
-          }
         }
       }
   `} render={Minutes} />
