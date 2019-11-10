@@ -3,7 +3,7 @@ import Layout from '../components/layout.js';
 
 import committee from '../images/committee-min.jpg'
 
-export default () => (
+export default (props) => (
     <Layout>
         <div className="container ">
             <section className="content commmittee-wrap">
@@ -13,7 +13,7 @@ export default () => (
                             <hr />
                             <div className="columns">
                                 <div className="column is-two-fifths">
-                                    <CommitteeTable />
+                                    <CommitteeTable data={props.data.allStrapiOfficer}/>
                                 </div>
                                 <div className="column">
                                     <img alt="burgess hill bowls club commitee group" src={committee} />
@@ -26,7 +26,7 @@ export default () => (
     </Layout>      
 )
 
-const CommitteeTable = () => (
+const CommitteeTable = (members) => (
     <table className="table is-bordered is-striped">
         <thead>
             <tr color="primary">
@@ -35,50 +35,29 @@ const CommitteeTable = () => (
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td colSpan="2" >Officers</td>
-            </tr>
-            <tr>
-                <td>President</td>
-                <td>Mick Pollard</td>
-            </tr>
-            <tr>
-                <td>Chairman</td>
-                <td>Gary Player</td>
-            </tr>
-            <tr>
-                <td>Secretary</td>
-                <td>Roy Evans</td>
-            </tr>
-            <tr>
-                <td>Treasurer</td>
-                <td>Paul Bremner</td>
-            </tr>
-            <tr>
-                <td>Match Secretary</td>
-                <td>Christine Salter</td>
-            </tr>
-            <tr>
-                <td>Membership Secretary</td>
-                <td>Anne Barnes</td>
-            </tr>
-            <tr>
-                <td>Men's Captain</td>
-                <td>Graham Corbitt</td>
-            </tr>
-            <tr>
-                <td>Ladies Captain</td>
-                <td>Hazel Jordan</td>
-            </tr>
-            <tr>
-                <td rowSpan="3">Commitee Members</td>
-                <td>Malcolm Mackenzie</td>
-            </tr>
-            <tr>
-                <td>Jane Mckenzie</td>
-            </tr>   <tr>
-                <td>Carol Masters</td>
-            </tr>
+            {
+                members.map(({member, position}) => {
+                    return (
+                        <tr>
+                            <td>{member}</td>
+                            <td>{position}</td>
+                        </tr>
+                    )
+                })
+            }
         </tbody>
     </table>
 )
+
+export const pageQuery = graphql `
+ { 
+    tournament: allStrapiOfficer {
+      edges {
+        node {
+            position
+            member
+        }
+      }
+    }
+  }
+`
