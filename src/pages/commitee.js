@@ -36,9 +36,10 @@ const CommitteeTable = (members) => (
         </thead>
         <tbody>
             {
-                members.map(({member, position}) => {
+                members.data.edges.map(({node}, i) => {
+                    const { member, position } = node;
                     return (
-                        <tr>
+                        <tr key={i}>
                             <td>{member}</td>
                             <td>{position}</td>
                         </tr>
@@ -51,7 +52,7 @@ const CommitteeTable = (members) => (
 
 export const pageQuery = graphql `
  { 
-    tournament: allStrapiOfficer {
+    allStrapiOfficer {
       edges {
         node {
             position
