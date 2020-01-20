@@ -48,7 +48,11 @@ const Fixture = ({ fixture }) => (
     <p className="heading is-marginless">
       Start time:
       <span className="has-text-weight-semibold">
-        {"14:00" || new Date(fixture.date).toLocaleTimeString()}
+        {new Date(fixture.date).toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+        })}
       </span>
     </p>
   </div>
