@@ -56,7 +56,7 @@ const Fixture = ({ fixture }) => (
 
 const DateBox = ({ date }) => {
   const newDate = new Date(date)
-  let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat", "Sun"]
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"]
   return (
     <div className={tableStyles.dateBoxWrap}>
       <h5 className="subtitle is-7 is-marginless">
