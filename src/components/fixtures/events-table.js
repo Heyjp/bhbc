@@ -1,7 +1,11 @@
 import React from "react"
 import tableStyles from "./fixture-table.module.scss"
+import Moment from "moment"
 
-const Fixture = ({ fixture }) => (
+const Fixture = ({ fixture, fixture: { date } }) => {
+  var d = new Date(fixture.date);
+  var n = d.getTimezoneOffset();
+  return (
   <div className="box">
     <div className="level is-marginless">
       <div className="level-left">
@@ -41,22 +45,28 @@ const Fixture = ({ fixture }) => (
                             {!fixture.Result && <p className="title is-5">TBC</p>}
                         </div>
                     </div>
-                </div> */}
+          </div> */}
     </div>
     <hr className={tableStyles.hBreak} />
+    <TimeFooter date={date} />
+  </div>
+)}
 
+const TimeFooter = ({date}) => {
+  const newDate = new Date(date)
+  const offset = newDate.getTimezoneOffset()
+  const time = Moment(newDate)
+    .utcOffset(0)
+    .format('HH:mm')
+  return (
     <p className="heading is-marginless">
       Start time:
       <span className="has-text-weight-semibold">
-        {new Date(fixture.date).toLocaleTimeString([], {
-          hour: "2-digit",
-          minute: "2-digit",
-          hour12: false,
-        })}
+        {time}
       </span>
     </p>
-  </div>
-)
+  )
+}
 
 const DateBox = ({ date }) => {
   const newDate = new Date(date)
