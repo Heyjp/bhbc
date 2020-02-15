@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout.js';
 
-import committee from '../images/committee-min.jpg'
+import committee from '../images/commitee-2020.jpg'
 
 export default (props) => (
     <Layout>
@@ -9,7 +9,7 @@ export default (props) => (
             <section className="content commmittee-wrap">
                     <div className="columns is-centered"> 
                         <div className="column is-four-fifths">
-                            <h1 className="title is-3 has-text-weight-light">Your Officers and GMC 2019</h1>
+                            <h1 className="title is-3 has-text-weight-light">Your Officers and GMC 2020</h1>
                             <hr />
                             <div className="columns">
                                 <div className="column is-two-fifths">

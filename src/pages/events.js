@@ -85,7 +85,22 @@ class EventsWrapper extends React.Component {
 
         return year === this.state.year && month === this.state.month
       })
-    let totalFixtures = fixtures.length
+      .sort((a, b) => {
+        let { node: { date: date1 } } = a
+        let { node: { date: date2 } } = b
+
+        date1 = Date.parse(date1)
+        date2 = Date.parse(date2)
+        if (date1 === date2) {
+          return 0;
+        } else if (date1 > date2) {
+          return 1
+        } else {
+          return -1
+        }
+      })
+
+      let totalFixtures = fixtures.length
 
     if (totalFixtures > 5) {
       fixtures = fixtures.slice(

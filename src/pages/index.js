@@ -80,7 +80,7 @@ const Content = () => (
             <div className="box box-vertical">
             <h4 className="subtitle is-5 has-text-weight-light">Events</h4>
                   <p>A number of social events take place throughout the year, Quiz nights, Bingo, Club Barbeques, Jazz Nights and a Christmas Party. </p>
-                  <Link to="/fixtures" className="button is-fullwidth has-background-success has-text-light">Find our Events</Link>
+                  <Link to="/events" className="button is-fullwidth has-background-success has-text-light">Find our Events</Link>
               </div>
             </div>
           <div className="column is-one-third box-column">
@@ -151,7 +151,7 @@ const Sponsors = () => (
                   <img className="sponsor-size" alt="sponsor logo" src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Ffta-ez-prod%2Fez%2Fimages%2F3%2F6%2F4%2F6%2F1386463-1-eng-GB%2Fsjp.jpg%3Fv1?width=700&source=ftadviser" />           
                 </a>
               </figure>
-              <p className="heading">Karren Harris <br/> Wealth Management</p>
+              <p className="heading">Karen Harris <br/> Wealth Management</p>
             </div>
 
           </div>

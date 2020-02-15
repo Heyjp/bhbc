@@ -6,7 +6,6 @@ import ReactMarkdown from 'react-markdown';
 
 const ArticleTemplate = ({data}) => {
     const {title, content, updated_at }= data.strapiArticle;
-    console.log(updated_at, 'this is updated')
     return (
         <Layout>
             <div className="container">
