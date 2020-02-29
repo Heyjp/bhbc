@@ -16,6 +16,12 @@ const Fixture = ({ fixture }) => (
       <div className="level-right">
         <div className="level-item has-text-centered">
           <div>
+            <p className="heading has-text-weight-bold">Dress</p>
+            <p className="heading">{fixture.dress}</p>
+          </div>
+        </div>
+        <div className="level-item has-text-centered">
+          <div>
             <p className="heading has-text-weight-bold">Location</p>
             <p className="heading">{fixture.venue}</p>
           </div>

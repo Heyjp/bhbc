@@ -7,45 +7,18 @@ const Fixture = ({ fixture, fixture: { date } }) => {
   var n = d.getTimezoneOffset();
   return (
   <div className="box">
-    <div className="level is-marginless">
-      <div className="level-left">
-        <div className="level-item">
+    <div>
+      <div className="social-box">
+        <div class="date-wrap">
           <DateBox date={fixture.date} />
         </div>
-        <div className="level-item">
+        <div className="description-wrap">
           <FixtureDescription
             name={fixture.title}
             description={fixture.description}
           />
         </div>
       </div>
-      {/* <div className="level-right">
-                    <div className="level-item has-text-centered">
-                        <div>
-                            <p className="heading has-text-weight-bold">Location</p>    
-                            <p className="heading">{fixture.venue}</p>
-                        </div>
-                    </div>
-                    <div className="level-item has-text-centered">
-                        <div>
-                            <p className="heading">{fixture.match}</p>
-                            <p className="heading">{fixture.match_type}</p>
-
-                        </div>
-                    </div>
-                    <div className="level-item">
-                        <div>
-                            <p className="heading">{fixture.teams || 'Mixed'}</p>
-                        </div>
-                    </div>
-                    <div className="level-item">
-                        <div>
-                            <p className="heading">Result</p>
-                            {fixture.Result && <p className="title is-5">{fixture.result}</p>}
-                            {!fixture.Result && <p className="title is-5">TBC</p>}
-                        </div>
-                    </div>
-          </div> */}
     </div>
     <hr className={tableStyles.hBreak} />
     <TimeFooter date={date} />
@@ -155,7 +128,7 @@ export default ({ fixtures, year, month, setPage, page, totalFixtures }) => {
     <div className="columns" style={{ width: "70%", maxWidth: "70%" }}>
       <div className="column is-full">
         <section className="events-main">
-          <h1 className="subtitle is-6">Fixtures for {year}</h1>
+          <h1 className="subtitle is-6">Social Events for {year}</h1>
           <h1 className="subtitle is-2">{month}</h1>
           <hr />
           {fixtures.map(({ node }, index) => {
