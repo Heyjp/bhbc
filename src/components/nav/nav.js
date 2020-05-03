@@ -88,13 +88,13 @@ class Nav extends React.Component {
               Social Events
             </Link>
             <div className="navbar-item has-dropdown is-hoverable">
-              <Link className="navbar-item" to="/competitions">
+              <p className="navbar-item">
                 Competitions
-              </Link>
+              </p>
               <div className="navbar-dropdown">
-                <Link className="navbar-item" to="/trophy">
-                  Nicholas Soames Trophy
-                </Link>
+              <Link className="navbar-item" to="/competitions">
+                Internal Club Competitions
+              </Link>
                 <Link className="navbar-item" to="/rules">
                   Rules
                 </Link>

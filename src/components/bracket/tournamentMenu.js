@@ -16,8 +16,8 @@ const CompsMenu = (props) => {
                         <button
                             href="#"
                           className={title === tournament
-                            ? "is-active" 
-                            : ""}
+                            ? "is-active button tournament-button is-info" 
+                            : "button tournament-button"}
                           onClick={()=> { 
                               setTournament(title)
                           }

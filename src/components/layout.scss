@@ -282,6 +282,10 @@ section {
     min-width: 80px;
 }
 
+.tournament-button {
+    margin-bottom: 0.25rem;
+}
+
 @media screen and (max-width: 600px) {
     .social-box {
         flex-direction: column;

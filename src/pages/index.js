@@ -37,7 +37,7 @@ const Hero = () => (
 const Main = () => (
   <section className="content main-container has-background-white">
     <div className="container">
-        <div className="columns is-centered">
+        <div className="columns is-centered is-vcentered">
           <div className="column">
             <div className="horizontal-center">
                 <figure className="image">

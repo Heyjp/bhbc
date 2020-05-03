@@ -1,6 +1,5 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import { brotliDecompress } from "zlib"
 
 const Minutes = props => {
   return (
